@@ -4,4 +4,5 @@
 
 pip install python-dotenv\
 pip install spotdl\
-pip install pandas
+pip install pandas\
+pip install spleeter

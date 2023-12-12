@@ -1,10 +1,11 @@
-from dotenv import load_dotenv
 import os
+import pandas as pd
+import numpy as np
+from dotenv import load_dotenv
 from spotdl import Song
 from spotdl import Downloader
 from spotdl import Spotdl
-import pandas as pd
-import numpy as np
+
 
 
 if __name__ == '__main__':
@@ -17,7 +18,7 @@ if __name__ == '__main__':
     # print(data.info())
     
     song_names = np.array(data["track_name"])
-    song_names = song_names[1:2] 
+    song_names = song_names[1721:1722] 
 
     for song_name in song_names:
         song = Song.from_search_term(song_name)
@@ -27,9 +28,8 @@ if __name__ == '__main__':
         print(f"{file_name} downloaded")
 
         dir_name = f"dataset/songs/{file_name}"
-        os.mkdir(dir_name)
-        curr_path = os. getcwd()
-        print(curr_path)
-        os.rename(curr_path + f"/{file_name}" + ".mp3", curr_path + f"/{dir_name}/{file_name}" + ".mp3")
-        
+        curr_dir = os.getcwd()
 
+        os.mkdir(dir_name)
+        os.rename(f"{os.path.join(curr_dir, file_name)}.mp3", f"{os.path.join(curr_dir, dir_name, file_name)}.mp3")
+        
