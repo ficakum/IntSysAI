@@ -10,7 +10,9 @@ pip install openai-whisper\
 pip install whisper-timestamped\
 pip install flask\
 pip install flask_restful\
-pip install flask_cors
+pip install flask_cors\
+pip install matplotlib\
+pip install scikit-learn
 
 #### Update requirements:
 
