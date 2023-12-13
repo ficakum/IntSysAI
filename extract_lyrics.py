@@ -14,7 +14,7 @@ if __name__ == '__main__':
                 file_path = os.path.join(dir_path, "vocals.mp3")
 
                 audio = whisper.load_audio(file_path)  
-                result = whisper.transcribe(model, audio, vad=True)
+                result = whisper.transcribe(model, audio)
 
                 json_object = json.dumps(result, indent = 2, ensure_ascii = False)
                 json_path = os.path.join(dir_path, "lyrics.json")

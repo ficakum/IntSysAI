@@ -13,7 +13,3 @@ pip install flask_restful\
 pip install flask_cors\
 pip install matplotlib\
 pip install scikit-learn
-
-#### Update requirements:
-
-pip freeze > requirements.txt
