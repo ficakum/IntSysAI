@@ -1,66 +1,94 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
+from sklearn.manifold import TSNE
+import seaborn as sns
+from datetime import datetime
+import numpy as np
+pd.options.mode.chained_assignment = None  # default='warn'
+
+from preprocess_dataset import preprocess
+
 
 
 def load_data(csv_file):
     tracks_df = pd.read_csv(csv_file)
 
-    # reduced_df = tracks_df[:1000]
-    # pd.plotting.scatter_matrix(reduced_df[['danceability', 'instrumentalness', 'energy', 'tempo', 'valence']], figsize=(10, 10))
-    # plt.show()
-    # print(tracks_df[['danceability', 'instrumentalness', 'energy', 'tempo', 'valence']].corr())
-
-    # feature_cols = ['danceability', 'instrumentalness', 'energy', 'tempo', 'valence']
-    # scaler = MinMaxScaler()
-    # normalized_df = scaler.fit_transform(tracks_df[feature_cols])
-
     return tracks_df
 
 
-def gen_result(tracks_df, dst_file):
-    model = KMeans(n_clusters=5, n_init=10)
-    model.fit(tracks_df[['danceability', 'instrumentalness', 'energy', 'tempo', 'valence']])
+def create_clusters(tracks_df, dst_file):
+    # tracks_df = tracks_df[:5000]
 
-    # print(model.labels_[:10], '\n\n', min(model.labels_), max(model.labels_))
-    tracks_df['type'] = model.labels_
-    # print(tracks_df.head(10))
+    model = KMeans(n_clusters=4, n_init=10)
+    columns = ['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 
+               'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms', 'release_year']
+    result = model.fit(tracks_df[columns])
 
-    tracks_df.to_csv(dst_file)
+    # save to file
+    tracks_df['cluster'] = result.labels_
+    tracks_df.to_csv(dst_file, index=False)
+    
+    # visualize clusters
+    # tracks_df = tracks_df[columns]
+    # tSNE = TSNE(n_components=2)
+    # tSNE_result = tSNE.fit_transform(tracks_df)
+
+    # colors = ['red', 'blue', 'purple', 'green']
+    # sns.scatterplot(x=tSNE_result[:, 0], y=tSNE_result[:, 1], hue=result.labels_, palette=colors, alpha=0.5, s=7)
+
+    # plt.show()
+
+
+def train(csv_path):
+    tracks = load_data(csv_path)
+    tracks = preprocess(tracks)
+
+    create_clusters(tracks, 'k_means_result.csv')
+
+
+def calculate_weighted_popularity(release_date):
+    release_date = datetime.strptime(release_date, '%Y-%m-%d')
+
+    time_span = datetime.now() - release_date
+
+    weight = 1 / (time_span.days + 1)
+
+    return weight
 
 
 def recommend_songs(tracks_df, playlist):
-    user_favorite_cluster = int(playlist.mode().loc[0]['type'])
+    user_favorite_cluster = int(playlist.mode().loc[0]['cluster'])
     print(f'\nFavorite cluster: {user_favorite_cluster}\n')
 
-    tracks_df = tracks_df[tracks_df.track_popularity > 70]
-    suggestions = tracks_df[tracks_df.type == user_favorite_cluster]
+    suggestions = tracks_df[tracks_df.cluster == user_favorite_cluster]
+
+    # waited_popularities = [calculate_weighted_popularity(suggestions["track_album_release_date"][ind]) 
+    #                        for ind in suggestions.index]
+    # suggestions["popularity_score"] = waited_popularities
+
+    # suggestions.sort_values('popularity_score', ascending=False, inplace=True)
 
     print(suggestions.head())
 
 
-# Function to calculate weighted popularity scores based on release date
-# def calculate_weighted_popularity(release_date):
-#     # Convert the release date to datetime object
-#     release_date = datetime.strptime(release_date, '%Y-%m-%d')
 
-#     # Calculate the time span between release date and today's date
-#     time_span = datetime.now() - release_date
+def predict(csv_path):
+    tracks = load_data(csv_path)  
 
-#     # Calculate the weighted popularity score based on time span (e.g., more recent releases have higher weight)
-#     weight = 1 / (time_span.days + 1)
-#     return weight
+    listened_tracks_ids = ['0r7CVbZTWZgbTCYdfa2P31', '2I4jAMEOEUQD5V1byYCqNS', '6fvbl9D9VjMtLRQsuWPyYt', 
+           '06Pvy98db25O7wlfFFFIRM', '0WfKDYeUAoLA3vdvLKKWMW']
+    listened_tracks = tracks[tracks.track_id.isin(listened_tracks_ids)]
+
+    recommend_songs(tracks, playlist=listened_tracks)
 
 
 if __name__ == "__main__":
-    # tracks = load_data('dataset/spotify_songs.csv')
-    # gen_result(tracks, 'k_means_result.csv')
+    
+    # train('dataset/spotify_songs.csv')
 
-    tracks = load_data('k_means_result.csv')  
-    ids = ['0r7CVbZTWZgbTCYdfa2P31', '2I4jAMEOEUQD5V1byYCqNS', '6fvbl9D9VjMtLRQsuWPyYt', '06Pvy98db25O7wlfFFFIRM', '0WfKDYeUAoLA3vdvLKKWMW']
-    favorites = tracks[tracks.track_id.isin(ids)]
-    recommend_songs(tracks, playlist=favorites)
+    predict('k_means_result.csv')
+   
 
 
 

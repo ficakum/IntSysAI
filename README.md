@@ -23,3 +23,5 @@ pip install flask_cors
 pip install matplotlib
 
 pip install scikit-learn
+
+pip install seaborn
