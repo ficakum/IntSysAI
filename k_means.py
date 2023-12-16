@@ -5,7 +5,8 @@ from sklearn.manifold import TSNE
 import seaborn as sns
 from datetime import datetime
 import numpy as np
-pd.options.mode.chained_assignment = None  # default='warn'
+from sklearn.metrics import silhouette_score
+pd.options.mode.chained_assignment = None 
 
 from preprocess_dataset import preprocess
 
@@ -17,34 +18,68 @@ def load_data(csv_file):
     return tracks_df
 
 
-def create_clusters(tracks_df, dst_file):
-    # tracks_df = tracks_df[:5000]
 
-    model = KMeans(n_clusters=4, n_init=10)
-    columns = ['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 
-               'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms', 'release_year']
-    result = model.fit(tracks_df[columns])
+def elbow_method(points, kmin, kmax):
+    cost =[]
+    for i in range(kmin, kmax):
+        kmeans = KMeans(n_clusters = i, n_init=20)
+        kmeans.fit(points)
+        
+        cost.append(kmeans.inertia_)     
+    
+    plt.plot(range(kmin, kmax), cost, color ='g', linewidth ='3')
+    plt.xlabel("Value of K")
+    plt.ylabel("Squared Error (Cost)")
+    plt.show() 
+    
+
+def silhouette_method(points, kmin, kmax):
+    cost =[]
+    for i in range(kmin, kmax):
+        kmeans = KMeans(n_clusters = i, n_init=20)
+        kmeans.fit(points)
+        
+        cost.append(silhouette_score(points, kmeans.labels_, metric = 'euclidean'))
+    
+    
+    plt.plot(range(kmin, kmax), cost, color ='g', linewidth ='3')
+    plt.xlabel("Value of K")
+    plt.ylabel("Silhouette score")
+    plt.show()
+
+
+def create_clusters(tracks_df, preprocessed_tracks, k, dst_file):
+    model = KMeans(n_clusters=k, n_init=20)
+    result = model.fit(preprocessed_tracks)
 
     # save to file
     tracks_df['cluster'] = result.labels_
     tracks_df.to_csv(dst_file, index=False)
     
     # visualize clusters
-    # tracks_df = tracks_df[columns]
     # tSNE = TSNE(n_components=2)
-    # tSNE_result = tSNE.fit_transform(tracks_df)
+    # tSNE_result = tSNE.fit_transform(preprocessed_tracks)
 
-    # colors = ['red', 'blue', 'purple', 'green']
-    # sns.scatterplot(x=tSNE_result[:, 0], y=tSNE_result[:, 1], hue=result.labels_, palette=colors, alpha=0.5, s=7)
+    # sns.scatterplot(x=tSNE_result[:, 0], y=tSNE_result[:, 1], hue=result.labels_, alpha=0.5, s=7)
 
-    # plt.show()
+    plt.show()
 
 
 def train(csv_path):
     tracks = load_data(csv_path)
-    tracks = preprocess(tracks)
+    preprocessed_tracks = preprocess(tracks)
 
-    create_clusters(tracks, 'k_means_result.csv')
+    columns = ['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 
+               'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms', 'release_year']
+
+    preprocessed_tracks = preprocessed_tracks[columns]
+
+    # kmin = 5
+    # kmax = 20
+    # elbow_method(preprocessed_tracks, kmin, kmax)
+    # silhouette_method(preprocessed_tracks, kmin, kmax)
+
+    create_clusters(tracks, preprocessed_tracks, 20, 'k_means_result.csv')
 
 
 def calculate_weighted_popularity(release_date):
@@ -62,11 +97,11 @@ def recommend_songs(tracks_df, playlist):
     print(f'\nFavorite cluster: {user_favorite_cluster}\n')
 
     suggestions = tracks_df[tracks_df.cluster == user_favorite_cluster]
-
+    suggestions = suggestions[~suggestions['track_id'].isin(playlist['track_id'])]
+    
     # waited_popularities = [calculate_weighted_popularity(suggestions["track_album_release_date"][ind]) 
     #                        for ind in suggestions.index]
     # suggestions["popularity_score"] = waited_popularities
-
     # suggestions.sort_values('popularity_score', ascending=False, inplace=True)
 
     print(suggestions.head())
