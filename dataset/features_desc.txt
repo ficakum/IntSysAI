@@ -1,0 +1,26 @@
+-track_id (string) - Song unique ID
+-track_name (string) - Song Name
+-track_artist (string) - Song Artist
+-track_popularity (double) - Song Popularity (0-100) 
+-track_album_id (string) - Album unique ID
+-track_album_name (string) - Song album name
+-track_album_release_date (string) - Date when album released
+-playlist_name (string) - Name of playlist
+-playlist_id (string) - Playlist ID
+-playlist_genre (string) - Playlist genre
+-playlist_subgenre (string) - Playlist subgenre
++release_year (extracted from track_album_release_date)
+
+
+-danceability (double) - Danceability describes how suitable a track is for dancing (0.0 - 1.0)
+-energy (double) - Perceptual measure of intensity (0.0 - 1.0) 
+-key (double) - The estimated overall key of the track. (E.g. 0 = C, 1 = C♯/D♭, 2 = D, and so on. If no key was detected: -1) 
+-loudness (double) - The overall loudness of a track in decibels (typical range between -60 and 0 db)
+-mode (double) -  Indicates the modality (major or minor) of a track (major is 1 and minor is 0)
+-speechiness (double) - Presence of spoken words in a track (0.0 - 1.0). 
+-acousticness (double) - A confidence measure of whether the track is acoustic (0.0 - 1.0)
+-instrumentalness (double) - Predicts whether a track contains no vocals (0.0 - 1.0) 
+-liveness (double) - Detects the presence of an audience (0.0 - 1.0).
+-valence (double) - A measure describing the musical positiveness (0.0 - 1.0)
+-tempo (double) - The overall estimated tempo of a track in beats per minute (BPM)
+-duration_ms (double) - Duration of song in milliseconds

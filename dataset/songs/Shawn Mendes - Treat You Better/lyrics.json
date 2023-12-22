@@ -1,0 +1,2887 @@
+{
+  "text": " I won't lie to you I know he's just not right for you And you could tell me if I'm off but I see it on your face when you say that he's the one that you want in your spending all your time in this wrong situation and anytime you want it to stop I know I can treat you better than he can and then he got like you, Deezer's a gentleman tell me why are we wasting time on all your friends when you should be with me instead I know I can treat you better but I got me again I'll stop time for you the second you say you'd like you to I just want to give you the love and that you're missing baby just to wake up with you will be everything I need in this could be so different tell me what you want to do because I know I can treat you better than he can and then he got like you, Deezer's a gentleman tell me why are we wasting time on all your friends when you should be with me instead I know I can treat you better but I got me again I'll stop time for you the second you say you'd like you to I just want to give you the love and that you're missing baby just to wake up with you will be everything I need in this world I just want to give you the love and that you're missing baby just to wake up with you the second you say you'd like you to I just want to give you the love and that you're missing baby then he can and then he got like you, Deezer's a gentleman tell me why are we wasting time on all your wasted crime when you should be with me instead I know I can treat you better for I can eat you for I can eat you for I can eat you",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 11.86,
+      "end": 20.98,
+      "text": " I won't lie to you I know he's just not right for you",
+      "tokens": [
+        50364,
+        286,
+        1582,
+        380,
+        4544,
+        281,
+        291,
+        286,
+        458,
+        415,
+        311,
+        445,
+        406,
+        558,
+        337,
+        291,
+        51512
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.28054085644808685,
+      "compression_ratio": 1.2990654205607477,
+      "no_speech_prob": 0.7131995558738708,
+      "confidence": 0.794,
+      "words": [
+        {
+          "text": "I",
+          "start": 11.86,
+          "end": 12.04,
+          "confidence": 0.441
+        },
+        {
+          "text": "won't",
+          "start": 12.04,
+          "end": 13.18,
+          "confidence": 0.734
+        },
+        {
+          "text": "lie",
+          "start": 13.18,
+          "end": 13.6,
+          "confidence": 0.959
+        },
+        {
+          "text": "to",
+          "start": 13.6,
+          "end": 14.46,
+          "confidence": 0.98
+        },
+        {
+          "text": "you",
+          "start": 14.46,
+          "end": 15.22,
+          "confidence": 0.95
+        },
+        {
+          "text": "I",
+          "start": 15.22,
+          "end": 16.92,
+          "confidence": 0.316
+        },
+        {
+          "text": "know",
+          "start": 16.92,
+          "end": 17.24,
+          "confidence": 0.991
+        },
+        {
+          "text": "he's",
+          "start": 17.24,
+          "end": 17.66,
+          "confidence": 0.895
+        },
+        {
+          "text": "just",
+          "start": 17.66,
+          "end": 18.06,
+          "confidence": 0.888
+        },
+        {
+          "text": "not",
+          "start": 18.06,
+          "end": 18.9,
+          "confidence": 0.956
+        },
+        {
+          "text": "right",
+          "start": 18.9,
+          "end": 19.58,
+          "confidence": 0.983
+        },
+        {
+          "text": "for",
+          "start": 19.58,
+          "end": 20.26,
+          "confidence": 0.785
+        },
+        {
+          "text": "you",
+          "start": 20.26,
+          "end": 20.98,
+          "confidence": 0.907
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 22.66,
+      "end": 26.9,
+      "text": " And you could tell me if I'm off but I see it on your face when you say that he's the",
+      "tokens": [
+        51512,
+        400,
+        291,
+        727,
+        980,
+        385,
+        498,
+        286,
+        478,
+        766,
+        457,
+        286,
+        536,
+        309,
+        322,
+        428,
+        1851,
+        562,
+        291,
+        584,
+        300,
+        415,
+        311,
+        264,
+        51708
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.28054085644808685,
+      "compression_ratio": 1.2990654205607477,
+      "no_speech_prob": 0.7131995558738708,
+      "confidence": 0.859,
+      "words": [
+        {
+          "text": "And",
+          "start": 22.66,
+          "end": 22.98,
+          "confidence": 0.766
+        },
+        {
+          "text": "you",
+          "start": 22.98,
+          "end": 23.1,
+          "confidence": 0.992
+        },
+        {
+          "text": "could",
+          "start": 23.1,
+          "end": 23.26,
+          "confidence": 0.781
+        },
+        {
+          "text": "tell",
+          "start": 23.26,
+          "end": 23.46,
+          "confidence": 0.976
+        },
+        {
+          "text": "me",
+          "start": 23.46,
+          "end": 23.68,
+          "confidence": 0.994
+        },
+        {
+          "text": "if",
+          "start": 23.68,
+          "end": 23.84,
+          "confidence": 0.979
+        },
+        {
+          "text": "I'm",
+          "start": 23.84,
+          "end": 24.06,
+          "confidence": 0.982
+        },
+        {
+          "text": "off",
+          "start": 24.06,
+          "end": 24.32,
+          "confidence": 0.962
+        },
+        {
+          "text": "but",
+          "start": 24.32,
+          "end": 24.54,
+          "confidence": 0.574
+        },
+        {
+          "text": "I",
+          "start": 24.54,
+          "end": 24.68,
+          "confidence": 0.979
+        },
+        {
+          "text": "see",
+          "start": 24.68,
+          "end": 24.92,
+          "confidence": 0.949
+        },
+        {
+          "text": "it",
+          "start": 24.92,
+          "end": 25.12,
+          "confidence": 0.532
+        },
+        {
+          "text": "on",
+          "start": 25.12,
+          "end": 25.28,
+          "confidence": 0.992
+        },
+        {
+          "text": "your",
+          "start": 25.28,
+          "end": 25.44,
+          "confidence": 0.989
+        },
+        {
+          "text": "face",
+          "start": 25.44,
+          "end": 25.76,
+          "confidence": 0.997
+        },
+        {
+          "text": "when",
+          "start": 25.76,
+          "end": 26.04,
+          "confidence": 0.502
+        },
+        {
+          "text": "you",
+          "start": 26.04,
+          "end": 26.18,
+          "confidence": 0.961
+        },
+        {
+          "text": "say",
+          "start": 26.18,
+          "end": 26.36,
+          "confidence": 0.959
+        },
+        {
+          "text": "that",
+          "start": 26.36,
+          "end": 26.54,
+          "confidence": 0.861
+        },
+        {
+          "text": "he's",
+          "start": 26.54,
+          "end": 26.8,
+          "confidence": 0.981
+        },
+        {
+          "text": "the",
+          "start": 26.8,
+          "end": 26.9,
+          "confidence": 0.543
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 2688,
+      "start": 26.9,
+      "end": 31.46,
+      "text": " one that you want in your spending all your time in this wrong situation",
+      "tokens": [
+        50364,
+        472,
+        300,
+        291,
+        528,
+        294,
+        428,
+        6434,
+        439,
+        428,
+        565,
+        294,
+        341,
+        2085,
+        2590,
+        50606
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44464203619187875,
+      "compression_ratio": 1.5592105263157894,
+      "no_speech_prob": 0.2048296332359314,
+      "confidence": 0.771,
+      "words": [
+        {
+          "text": "one",
+          "start": 26.9,
+          "end": 27.1,
+          "confidence": 0.951
+        },
+        {
+          "text": "that",
+          "start": 27.1,
+          "end": 27.28,
+          "confidence": 0.932
+        },
+        {
+          "text": "you",
+          "start": 27.28,
+          "end": 27.48,
+          "confidence": 0.993
+        },
+        {
+          "text": "want",
+          "start": 27.48,
+          "end": 27.86,
+          "confidence": 0.888
+        },
+        {
+          "text": "in",
+          "start": 27.86,
+          "end": 28.86,
+          "confidence": 0.193
+        },
+        {
+          "text": "your",
+          "start": 28.86,
+          "end": 29.02,
+          "confidence": 0.3
+        },
+        {
+          "text": "spending",
+          "start": 29.02,
+          "end": 29.32,
+          "confidence": 0.841
+        },
+        {
+          "text": "all",
+          "start": 29.32,
+          "end": 29.64,
+          "confidence": 0.863
+        },
+        {
+          "text": "your",
+          "start": 29.64,
+          "end": 29.76,
+          "confidence": 0.977
+        },
+        {
+          "text": "time",
+          "start": 29.76,
+          "end": 30.04,
+          "confidence": 0.998
+        },
+        {
+          "text": "in",
+          "start": 30.04,
+          "end": 30.28,
+          "confidence": 0.894
+        },
+        {
+          "text": "this",
+          "start": 30.28,
+          "end": 30.48,
+          "confidence": 0.973
+        },
+        {
+          "text": "wrong",
+          "start": 30.48,
+          "end": 30.7,
+          "confidence": 0.97
+        },
+        {
+          "text": "situation",
+          "start": 30.7,
+          "end": 31.46,
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 2688,
+      "start": 31.78,
+      "end": 39.2,
+      "text": " and anytime you want it to stop I know I can treat you better than he can",
+      "tokens": [
+        50606,
+        293,
+        13038,
+        291,
+        528,
+        309,
+        281,
+        1590,
+        286,
+        458,
+        286,
+        393,
+        2387,
+        291,
+        1101,
+        813,
+        415,
+        393,
+        51008
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44464203619187875,
+      "compression_ratio": 1.5592105263157894,
+      "no_speech_prob": 0.2048296332359314,
+      "confidence": 0.785,
+      "words": [
+        {
+          "text": "and",
+          "start": 31.78,
+          "end": 32.02,
+          "confidence": 0.626
+        },
+        {
+          "text": "anytime",
+          "start": 32.02,
+          "end": 32.42,
+          "confidence": 0.67
+        },
+        {
+          "text": "you",
+          "start": 32.42,
+          "end": 32.74,
+          "confidence": 0.989
+        },
+        {
+          "text": "want",
+          "start": 32.74,
+          "end": 32.92,
+          "confidence": 0.643
+        },
+        {
+          "text": "it",
+          "start": 32.92,
+          "end": 33.06,
+          "confidence": 0.978
+        },
+        {
+          "text": "to",
+          "start": 33.06,
+          "end": 33.2,
+          "confidence": 0.955
+        },
+        {
+          "text": "stop",
+          "start": 33.2,
+          "end": 33.56,
+          "confidence": 0.99
+        },
+        {
+          "text": "I",
+          "start": 33.56,
+          "end": 34.3,
+          "confidence": 0.393
+        },
+        {
+          "text": "know",
+          "start": 34.3,
+          "end": 34.52,
+          "confidence": 0.991
+        },
+        {
+          "text": "I",
+          "start": 34.52,
+          "end": 34.7,
+          "confidence": 0.978
+        },
+        {
+          "text": "can",
+          "start": 34.7,
+          "end": 34.84,
+          "confidence": 0.988
+        },
+        {
+          "text": "treat",
+          "start": 34.84,
+          "end": 35.18,
+          "confidence": 0.713
+        },
+        {
+          "text": "you",
+          "start": 35.18,
+          "end": 35.9,
+          "confidence": 0.993
+        },
+        {
+          "text": "better",
+          "start": 35.9,
+          "end": 37.22,
+          "confidence": 0.97
+        },
+        {
+          "text": "than",
+          "start": 37.22,
+          "end": 38.34,
+          "confidence": 0.557
+        },
+        {
+          "text": "he",
+          "start": 38.34,
+          "end": 38.74,
+          "confidence": 0.612
+        },
+        {
+          "text": "can",
+          "start": 38.74,
+          "end": 39.2,
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 2688,
+      "start": 39.78,
+      "end": 47.85,
+      "text": " and then he got like you, Deezer's a gentleman tell me why are we wasting time on all your",
+      "tokens": [
+        51008,
+        293,
+        550,
+        415,
+        658,
+        411,
+        291,
+        11,
+        1346,
+        4371,
+        260,
+        311,
+        257,
+        15761,
+        980,
+        385,
+        983,
+        366,
+        321,
+        20457,
+        565,
+        322,
+        439,
+        428,
+        51412
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44464203619187875,
+      "compression_ratio": 1.5592105263157894,
+      "no_speech_prob": 0.2048296332359314,
+      "confidence": 0.64,
+      "words": [
+        {
+          "text": "and",
+          "start": 39.78,
+          "end": 40.02,
+          "confidence": 0.702
+        },
+        {
+          "text": "then",
+          "start": 40.02,
+          "end": 40.22,
+          "confidence": 0.818
+        },
+        {
+          "text": "he",
+          "start": 40.22,
+          "end": 40.36,
+          "confidence": 0.867
+        },
+        {
+          "text": "got",
+          "start": 40.36,
+          "end": 40.5,
+          "confidence": 0.906
+        },
+        {
+          "text": "like",
+          "start": 40.5,
+          "end": 40.72,
+          "confidence": 0.933
+        },
+        {
+          "text": "you,",
+          "start": 40.72,
+          "end": 41.14,
+          "confidence": 0.971
+        },
+        {
+          "text": "Deezer's",
+          "start": 41.54,
+          "end": 42.98,
+          "confidence": 0.353
+        },
+        {
+          "text": "a",
+          "start": 42.98,
+          "end": 43.32,
+          "confidence": 0.421
+        },
+        {
+          "text": "gentleman",
+          "start": 43.32,
+          "end": 44.44,
+          "confidence": 0.32
+        },
+        {
+          "text": "tell",
+          "start": 44.44,
+          "end": 45.66,
+          "confidence": 0.326
+        },
+        {
+          "text": "me",
+          "start": 45.66,
+          "end": 45.86,
+          "confidence": 0.993
+        },
+        {
+          "text": "why",
+          "start": 45.86,
+          "end": 46.06,
+          "confidence": 0.976
+        },
+        {
+          "text": "are",
+          "start": 46.06,
+          "end": 46.26,
+          "confidence": 0.703
+        },
+        {
+          "text": "we",
+          "start": 46.26,
+          "end": 46.44,
+          "confidence": 0.948
+        },
+        {
+          "text": "wasting",
+          "start": 46.44,
+          "end": 46.82,
+          "confidence": 0.933
+        },
+        {
+          "text": "time",
+          "start": 46.82,
+          "end": 47.26,
+          "confidence": 0.983
+        },
+        {
+          "text": "on",
+          "start": 47.26,
+          "end": 47.56,
+          "confidence": 0.701
+        },
+        {
+          "text": "all",
+          "start": 47.56,
+          "end": 47.72,
+          "confidence": 0.734
+        },
+        {
+          "text": "your",
+          "start": 47.72,
+          "end": 47.85,
+          "confidence": 0.653
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 4784,
+      "start": 47.85,
+      "end": 54.52,
+      "text": " friends when you should be with me instead I know I can treat you better",
+      "tokens": [
+        50364,
+        1855,
+        562,
+        291,
+        820,
+        312,
+        365,
+        385,
+        2602,
+        286,
+        458,
+        286,
+        393,
+        2387,
+        291,
+        1101,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4444268014695909,
+      "compression_ratio": 1.5813953488372092,
+      "no_speech_prob": 0.09949914366006851,
+      "confidence": 0.752,
+      "words": [
+        {
+          "text": "friends",
+          "start": 47.85,
+          "end": 48.12,
+          "confidence": 0.116
+        },
+        {
+          "text": "when",
+          "start": 48.12,
+          "end": 48.92,
+          "confidence": 0.344
+        },
+        {
+          "text": "you",
+          "start": 48.92,
+          "end": 49.16,
+          "confidence": 0.952
+        },
+        {
+          "text": "should",
+          "start": 49.16,
+          "end": 49.32,
+          "confidence": 0.954
+        },
+        {
+          "text": "be",
+          "start": 49.32,
+          "end": 49.54,
+          "confidence": 0.995
+        },
+        {
+          "text": "with",
+          "start": 49.54,
+          "end": 49.82,
+          "confidence": 0.995
+        },
+        {
+          "text": "me",
+          "start": 49.82,
+          "end": 50.18,
+          "confidence": 0.985
+        },
+        {
+          "text": "instead",
+          "start": 50.18,
+          "end": 50.8,
+          "confidence": 0.577
+        },
+        {
+          "text": "I",
+          "start": 50.8,
+          "end": 51.66,
+          "confidence": 0.723
+        },
+        {
+          "text": "know",
+          "start": 51.66,
+          "end": 51.86,
+          "confidence": 0.993
+        },
+        {
+          "text": "I",
+          "start": 51.86,
+          "end": 52.02,
+          "confidence": 0.984
+        },
+        {
+          "text": "can",
+          "start": 52.02,
+          "end": 52.2,
+          "confidence": 0.99
+        },
+        {
+          "text": "treat",
+          "start": 52.2,
+          "end": 52.6,
+          "confidence": 0.987
+        },
+        {
+          "text": "you",
+          "start": 52.6,
+          "end": 53.26,
+          "confidence": 0.994
+        },
+        {
+          "text": "better",
+          "start": 53.26,
+          "end": 54.52,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 4784,
+      "start": 56.46,
+      "end": 61.66,
+      "text": " but I got me again I'll stop time for you",
+      "tokens": [
+        50764,
+        457,
+        286,
+        658,
+        385,
+        797,
+        286,
+        603,
+        1590,
+        565,
+        337,
+        291,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4444268014695909,
+      "compression_ratio": 1.5813953488372092,
+      "no_speech_prob": 0.09949914366006851,
+      "confidence": 0.593,
+      "words": [
+        {
+          "text": "but",
+          "start": 56.46,
+          "end": 56.84,
+          "confidence": 0.604
+        },
+        {
+          "text": "I",
+          "start": 56.84,
+          "end": 57.14,
+          "confidence": 0.982
+        },
+        {
+          "text": "got",
+          "start": 57.14,
+          "end": 57.34,
+          "confidence": 0.316
+        },
+        {
+          "text": "me",
+          "start": 57.34,
+          "end": 57.64,
+          "confidence": 0.206
+        },
+        {
+          "text": "again",
+          "start": 57.64,
+          "end": 58.1,
+          "confidence": 0.247
+        },
+        {
+          "text": "I'll",
+          "start": 58.1,
+          "end": 58.86,
+          "confidence": 0.631
+        },
+        {
+          "text": "stop",
+          "start": 58.86,
+          "end": 59.28,
+          "confidence": 0.985
+        },
+        {
+          "text": "time",
+          "start": 59.28,
+          "end": 60.0,
+          "confidence": 0.873
+        },
+        {
+          "text": "for",
+          "start": 60.0,
+          "end": 60.76,
+          "confidence": 0.975
+        },
+        {
+          "text": "you",
+          "start": 60.76,
+          "end": 61.66,
+          "confidence": 0.995
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 4784,
+      "start": 62.9,
+      "end": 71.36,
+      "text": " the second you say you'd like you to I just want to give you the love and",
+      "tokens": [
+        51114,
+        264,
+        1150,
+        291,
+        584,
+        291,
+        1116,
+        411,
+        291,
+        281,
+        286,
+        445,
+        528,
+        281,
+        976,
+        291,
+        264,
+        959,
+        293,
+        51540
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4444268014695909,
+      "compression_ratio": 1.5813953488372092,
+      "no_speech_prob": 0.09949914366006851,
+      "confidence": 0.774,
+      "words": [
+        {
+          "text": "the",
+          "start": 62.9,
+          "end": 63.1,
+          "confidence": 0.511
+        },
+        {
+          "text": "second",
+          "start": 63.1,
+          "end": 63.44,
+          "confidence": 0.993
+        },
+        {
+          "text": "you",
+          "start": 63.44,
+          "end": 63.76,
+          "confidence": 0.991
+        },
+        {
+          "text": "say",
+          "start": 63.76,
+          "end": 64.32,
+          "confidence": 0.963
+        },
+        {
+          "text": "you'd",
+          "start": 64.32,
+          "end": 65.26,
+          "confidence": 0.934
+        },
+        {
+          "text": "like",
+          "start": 65.26,
+          "end": 65.78,
+          "confidence": 0.994
+        },
+        {
+          "text": "you",
+          "start": 65.78,
+          "end": 66.54,
+          "confidence": 0.29
+        },
+        {
+          "text": "to",
+          "start": 66.54,
+          "end": 66.94,
+          "confidence": 0.791
+        },
+        {
+          "text": "I",
+          "start": 66.94,
+          "end": 69.62,
+          "confidence": 0.606
+        },
+        {
+          "text": "just",
+          "start": 69.62,
+          "end": 69.86,
+          "confidence": 0.986
+        },
+        {
+          "text": "want",
+          "start": 69.86,
+          "end": 70.12,
+          "confidence": 0.668
+        },
+        {
+          "text": "to",
+          "start": 70.12,
+          "end": 70.28,
+          "confidence": 0.948
+        },
+        {
+          "text": "give",
+          "start": 70.28,
+          "end": 70.52,
+          "confidence": 0.974
+        },
+        {
+          "text": "you",
+          "start": 70.52,
+          "end": 70.82,
+          "confidence": 0.991
+        },
+        {
+          "text": "the",
+          "start": 70.82,
+          "end": 71.0,
+          "confidence": 0.927
+        },
+        {
+          "text": "love",
+          "start": 71.0,
+          "end": 71.2,
+          "confidence": 0.899
+        },
+        {
+          "text": "and",
+          "start": 71.2,
+          "end": 71.36,
+          "confidence": 0.342
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 4784,
+      "start": 71.36,
+      "end": 76.84,
+      "text": " that you're missing baby just to wake up with you will be everything I need in this",
+      "tokens": [
+        51540,
+        300,
+        291,
+        434,
+        5361,
+        3186,
+        445,
+        281,
+        6634,
+        493,
+        365,
+        291,
+        486,
+        312,
+        1203,
+        286,
+        643,
+        294,
+        341,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4444268014695909,
+      "compression_ratio": 1.5813953488372092,
+      "no_speech_prob": 0.09949914366006851,
+      "confidence": 0.738,
+      "words": [
+        {
+          "text": "that",
+          "start": 71.36,
+          "end": 71.56,
+          "confidence": 0.482
+        },
+        {
+          "text": "you're",
+          "start": 71.56,
+          "end": 71.76,
+          "confidence": 0.653
+        },
+        {
+          "text": "missing",
+          "start": 71.76,
+          "end": 72.2,
+          "confidence": 0.987
+        },
+        {
+          "text": "baby",
+          "start": 72.2,
+          "end": 72.72,
+          "confidence": 0.799
+        },
+        {
+          "text": "just",
+          "start": 72.72,
+          "end": 72.98,
+          "confidence": 0.915
+        },
+        {
+          "text": "to",
+          "start": 72.98,
+          "end": 73.18,
+          "confidence": 0.346
+        },
+        {
+          "text": "wake",
+          "start": 73.18,
+          "end": 73.44,
+          "confidence": 0.998
+        },
+        {
+          "text": "up",
+          "start": 73.44,
+          "end": 73.68,
+          "confidence": 0.997
+        },
+        {
+          "text": "with",
+          "start": 73.68,
+          "end": 73.9,
+          "confidence": 0.984
+        },
+        {
+          "text": "you",
+          "start": 73.9,
+          "end": 74.42,
+          "confidence": 0.993
+        },
+        {
+          "text": "will",
+          "start": 74.42,
+          "end": 75.16,
+          "confidence": 0.434
+        },
+        {
+          "text": "be",
+          "start": 75.16,
+          "end": 75.34,
+          "confidence": 0.962
+        },
+        {
+          "text": "everything",
+          "start": 75.34,
+          "end": 75.8,
+          "confidence": 0.971
+        },
+        {
+          "text": "I",
+          "start": 75.8,
+          "end": 76.06,
+          "confidence": 0.843
+        },
+        {
+          "text": "need",
+          "start": 76.06,
+          "end": 76.3,
+          "confidence": 0.892
+        },
+        {
+          "text": "in",
+          "start": 76.3,
+          "end": 76.6,
+          "confidence": 0.525
+        },
+        {
+          "text": "this",
+          "start": 76.6,
+          "end": 76.84,
+          "confidence": 0.525
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "seek": 7684,
+      "start": 76.9,
+      "end": 83.28,
+      "text": " could be so different tell me what you want to do because I know I can treat you better",
+      "tokens": [
+        50364,
+        727,
+        312,
+        370,
+        819,
+        980,
+        385,
+        437,
+        291,
+        528,
+        281,
+        360,
+        570,
+        286,
+        458,
+        286,
+        393,
+        2387,
+        291,
+        1101,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17164995156082452,
+      "compression_ratio": 1.4393939393939394,
+      "no_speech_prob": 0.0421706885099411,
+      "confidence": 0.867,
+      "words": [
+        {
+          "text": "could",
+          "start": 76.9,
+          "end": 77.12,
+          "confidence": 0.452
+        },
+        {
+          "text": "be",
+          "start": 77.12,
+          "end": 77.3,
+          "confidence": 0.996
+        },
+        {
+          "text": "so",
+          "start": 77.3,
+          "end": 77.52,
+          "confidence": 0.973
+        },
+        {
+          "text": "different",
+          "start": 77.52,
+          "end": 78.04,
+          "confidence": 0.995
+        },
+        {
+          "text": "tell",
+          "start": 78.04,
+          "end": 78.4,
+          "confidence": 0.928
+        },
+        {
+          "text": "me",
+          "start": 78.4,
+          "end": 78.56,
+          "confidence": 0.998
+        },
+        {
+          "text": "what",
+          "start": 78.56,
+          "end": 78.74,
+          "confidence": 0.949
+        },
+        {
+          "text": "you",
+          "start": 78.74,
+          "end": 78.96,
+          "confidence": 0.989
+        },
+        {
+          "text": "want",
+          "start": 78.96,
+          "end": 79.32,
+          "confidence": 0.894
+        },
+        {
+          "text": "to",
+          "start": 79.32,
+          "end": 79.56,
+          "confidence": 0.595
+        },
+        {
+          "text": "do",
+          "start": 79.56,
+          "end": 79.94,
+          "confidence": 0.988
+        },
+        {
+          "text": "because",
+          "start": 79.94,
+          "end": 80.46,
+          "confidence": 0.414
+        },
+        {
+          "text": "I",
+          "start": 80.46,
+          "end": 80.66,
+          "confidence": 0.982
+        },
+        {
+          "text": "know",
+          "start": 80.66,
+          "end": 80.82,
+          "confidence": 0.997
+        },
+        {
+          "text": "I",
+          "start": 80.82,
+          "end": 80.98,
+          "confidence": 0.987
+        },
+        {
+          "text": "can",
+          "start": 80.98,
+          "end": 81.14,
+          "confidence": 0.991
+        },
+        {
+          "text": "treat",
+          "start": 81.14,
+          "end": 81.48,
+          "confidence": 0.942
+        },
+        {
+          "text": "you",
+          "start": 81.48,
+          "end": 82.24,
+          "confidence": 0.971
+        },
+        {
+          "text": "better",
+          "start": 82.24,
+          "end": 83.28,
+          "confidence": 0.93
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "seek": 7684,
+      "start": 84.4,
+      "end": 94.12,
+      "text": " than he can and then he got like you, Deezer's a gentleman tell me why are we wasting time on all your",
+      "tokens": [
+        50714,
+        813,
+        415,
+        393,
+        293,
+        550,
+        415,
+        658,
+        411,
+        291,
+        11,
+        1346,
+        4371,
+        260,
+        311,
+        257,
+        15761,
+        980,
+        385,
+        983,
+        366,
+        321,
+        20457,
+        565,
+        322,
+        439,
+        428,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17164995156082452,
+      "compression_ratio": 1.4393939393939394,
+      "no_speech_prob": 0.0421706885099411,
+      "confidence": 0.934,
+      "words": [
+        {
+          "text": "than",
+          "start": 84.4,
+          "end": 84.64,
+          "confidence": 0.812
+        },
+        {
+          "text": "he",
+          "start": 84.64,
+          "end": 85.0,
+          "confidence": 0.995
+        },
+        {
+          "text": "can",
+          "start": 85.0,
+          "end": 85.44,
+          "confidence": 0.981
+        },
+        {
+          "text": "and",
+          "start": 85.44,
+          "end": 86.26,
+          "confidence": 0.892
+        },
+        {
+          "text": "then",
+          "start": 86.26,
+          "end": 86.44,
+          "confidence": 0.996
+        },
+        {
+          "text": "he",
+          "start": 86.44,
+          "end": 86.62,
+          "confidence": 0.967
+        },
+        {
+          "text": "got",
+          "start": 86.62,
+          "end": 86.76,
+          "confidence": 0.994
+        },
+        {
+          "text": "like",
+          "start": 86.76,
+          "end": 86.96,
+          "confidence": 0.996
+        },
+        {
+          "text": "you,",
+          "start": 86.96,
+          "end": 87.36,
+          "confidence": 0.993
+        },
+        {
+          "text": "Deezer's",
+          "start": 87.82,
+          "end": 89.22,
+          "confidence": 0.995
+        },
+        {
+          "text": "a",
+          "start": 89.22,
+          "end": 89.54,
+          "confidence": 0.983
+        },
+        {
+          "text": "gentleman",
+          "start": 89.54,
+          "end": 90.72,
+          "confidence": 0.992
+        },
+        {
+          "text": "tell",
+          "start": 90.72,
+          "end": 91.92,
+          "confidence": 0.742
+        },
+        {
+          "text": "me",
+          "start": 91.92,
+          "end": 92.1,
+          "confidence": 0.988
+        },
+        {
+          "text": "why",
+          "start": 92.1,
+          "end": 92.32,
+          "confidence": 0.987
+        },
+        {
+          "text": "are",
+          "start": 92.32,
+          "end": 92.52,
+          "confidence": 0.95
+        },
+        {
+          "text": "we",
+          "start": 92.52,
+          "end": 92.68,
+          "confidence": 0.976
+        },
+        {
+          "text": "wasting",
+          "start": 92.68,
+          "end": 93.08,
+          "confidence": 0.821
+        },
+        {
+          "text": "time",
+          "start": 93.08,
+          "end": 93.54,
+          "confidence": 0.916
+        },
+        {
+          "text": "on",
+          "start": 93.54,
+          "end": 93.82,
+          "confidence": 0.719
+        },
+        {
+          "text": "all",
+          "start": 93.82,
+          "end": 93.98,
+          "confidence": 0.841
+        },
+        {
+          "text": "your",
+          "start": 93.98,
+          "end": 94.12,
+          "confidence": 0.924
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "seek": 9384,
+      "start": 94.12,
+      "end": 100.84,
+      "text": " friends when you should be with me instead I know I can treat you better",
+      "tokens": [
+        50364,
+        1855,
+        562,
+        291,
+        820,
+        312,
+        365,
+        385,
+        2602,
+        286,
+        458,
+        286,
+        393,
+        2387,
+        291,
+        1101,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22519445419311523,
+      "compression_ratio": 1.4857142857142858,
+      "no_speech_prob": 0.0717632919549942,
+      "confidence": 0.963,
+      "words": [
+        {
+          "text": "friends",
+          "start": 94.12,
+          "end": 94.48,
+          "confidence": 0.782
+        },
+        {
+          "text": "when",
+          "start": 94.48,
+          "end": 95.1,
+          "confidence": 0.817
+        },
+        {
+          "text": "you",
+          "start": 95.1,
+          "end": 95.44,
+          "confidence": 0.986
+        },
+        {
+          "text": "should",
+          "start": 95.44,
+          "end": 95.58,
+          "confidence": 0.975
+        },
+        {
+          "text": "be",
+          "start": 95.58,
+          "end": 95.8,
+          "confidence": 0.998
+        },
+        {
+          "text": "with",
+          "start": 95.8,
+          "end": 96.06,
+          "confidence": 0.998
+        },
+        {
+          "text": "me",
+          "start": 96.06,
+          "end": 96.44,
+          "confidence": 0.992
+        },
+        {
+          "text": "instead",
+          "start": 96.44,
+          "end": 97.12,
+          "confidence": 0.984
+        },
+        {
+          "text": "I",
+          "start": 97.12,
+          "end": 97.9,
+          "confidence": 0.973
+        },
+        {
+          "text": "know",
+          "start": 97.9,
+          "end": 98.14,
+          "confidence": 0.997
+        },
+        {
+          "text": "I",
+          "start": 98.14,
+          "end": 98.28,
+          "confidence": 0.991
+        },
+        {
+          "text": "can",
+          "start": 98.28,
+          "end": 98.44,
+          "confidence": 0.996
+        },
+        {
+          "text": "treat",
+          "start": 98.44,
+          "end": 98.86,
+          "confidence": 0.997
+        },
+        {
+          "text": "you",
+          "start": 98.86,
+          "end": 99.62,
+          "confidence": 0.998
+        },
+        {
+          "text": "better",
+          "start": 99.62,
+          "end": 100.84,
+          "confidence": 0.996
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "seek": 9384,
+      "start": 102.84,
+      "end": 109.24,
+      "text": " but I got me again I'll stop time for you",
+      "tokens": [
+        50764,
+        457,
+        286,
+        658,
+        385,
+        797,
+        286,
+        603,
+        1590,
+        565,
+        337,
+        291,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22519445419311523,
+      "compression_ratio": 1.4857142857142858,
+      "no_speech_prob": 0.0717632919549942,
+      "confidence": 0.779,
+      "words": [
+        {
+          "text": "but",
+          "start": 102.84,
+          "end": 103.06,
+          "confidence": 0.835
+        },
+        {
+          "text": "I",
+          "start": 103.06,
+          "end": 103.32,
+          "confidence": 0.994
+        },
+        {
+          "text": "got",
+          "start": 103.32,
+          "end": 103.54,
+          "confidence": 0.983
+        },
+        {
+          "text": "me",
+          "start": 103.54,
+          "end": 103.86,
+          "confidence": 0.776
+        },
+        {
+          "text": "again",
+          "start": 103.86,
+          "end": 104.42,
+          "confidence": 0.996
+        },
+        {
+          "text": "I'll",
+          "start": 104.42,
+          "end": 105.18,
+          "confidence": 0.342
+        },
+        {
+          "text": "stop",
+          "start": 105.18,
+          "end": 107.38,
+          "confidence": 0.972
+        },
+        {
+          "text": "time",
+          "start": 107.38,
+          "end": 108.12,
+          "confidence": 0.926
+        },
+        {
+          "text": "for",
+          "start": 108.12,
+          "end": 108.88,
+          "confidence": 0.97
+        },
+        {
+          "text": "you",
+          "start": 108.88,
+          "end": 109.24,
+          "confidence": 0.992
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "seek": 9384,
+      "start": 109.24,
+      "end": 117.66,
+      "text": " the second you say you'd like you to I just want to give you the love and that you're missing",
+      "tokens": [
+        51114,
+        264,
+        1150,
+        291,
+        584,
+        291,
+        1116,
+        411,
+        291,
+        281,
+        286,
+        445,
+        528,
+        281,
+        976,
+        291,
+        264,
+        959,
+        293,
+        300,
+        291,
+        434,
+        5361,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22519445419311523,
+      "compression_ratio": 1.4857142857142858,
+      "no_speech_prob": 0.0717632919549942,
+      "confidence": 0.834,
+      "words": [
+        {
+          "text": "the",
+          "start": 109.24,
+          "end": 109.26,
+          "confidence": 0.49
+        },
+        {
+          "text": "second",
+          "start": 109.26,
+          "end": 109.3,
+          "confidence": 0.842
+        },
+        {
+          "text": "you",
+          "start": 109.3,
+          "end": 111.78,
+          "confidence": 0.953
+        },
+        {
+          "text": "say",
+          "start": 111.78,
+          "end": 111.82,
+          "confidence": 0.952
+        },
+        {
+          "text": "you'd",
+          "start": 111.82,
+          "end": 112.5,
+          "confidence": 0.898
+        },
+        {
+          "text": "like",
+          "start": 112.5,
+          "end": 112.52,
+          "confidence": 0.963
+        },
+        {
+          "text": "you",
+          "start": 112.52,
+          "end": 113.3,
+          "confidence": 0.714
+        },
+        {
+          "text": "to",
+          "start": 113.3,
+          "end": 113.32,
+          "confidence": 0.923
+        },
+        {
+          "text": "I",
+          "start": 113.32,
+          "end": 113.36,
+          "confidence": 0.884
+        },
+        {
+          "text": "just",
+          "start": 113.36,
+          "end": 113.38,
+          "confidence": 0.671
+        },
+        {
+          "text": "want",
+          "start": 113.38,
+          "end": 113.44,
+          "confidence": 0.965
+        },
+        {
+          "text": "to",
+          "start": 113.44,
+          "end": 115.76,
+          "confidence": 0.968
+        },
+        {
+          "text": "give",
+          "start": 115.76,
+          "end": 116.08,
+          "confidence": 0.923
+        },
+        {
+          "text": "you",
+          "start": 116.08,
+          "end": 117.06,
+          "confidence": 0.892
+        },
+        {
+          "text": "the",
+          "start": 117.06,
+          "end": 117.46,
+          "confidence": 0.885
+        },
+        {
+          "text": "love",
+          "start": 117.46,
+          "end": 117.58,
+          "confidence": 0.97
+        },
+        {
+          "text": "and",
+          "start": 117.58,
+          "end": 117.6,
+          "confidence": 0.94
+        },
+        {
+          "text": "that",
+          "start": 117.6,
+          "end": 117.62,
+          "confidence": 0.772
+        },
+        {
+          "text": "you're",
+          "start": 117.62,
+          "end": 117.64,
+          "confidence": 0.809
+        },
+        {
+          "text": "missing",
+          "start": 117.64,
+          "end": 117.66,
+          "confidence": 0.517
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "seek": 11784,
+      "start": 118.06,
+      "end": 123.34,
+      "text": " baby just to wake up with you will be everything I need in this world",
+      "tokens": [
+        50364,
+        3186,
+        445,
+        281,
+        6634,
+        493,
+        365,
+        291,
+        486,
+        312,
+        1203,
+        286,
+        643,
+        294,
+        341,
+        1002,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37775695685184363,
+      "compression_ratio": 2.073170731707317,
+      "no_speech_prob": 0.32794642448425293,
+      "confidence": 0.509,
+      "words": [
+        {
+          "text": "baby",
+          "start": 118.06,
+          "end": 119.06,
+          "confidence": 0.438
+        },
+        {
+          "text": "just",
+          "start": 119.06,
+          "end": 119.1,
+          "confidence": 0.277
+        },
+        {
+          "text": "to",
+          "start": 119.1,
+          "end": 119.12,
+          "confidence": 0.413
+        },
+        {
+          "text": "wake",
+          "start": 119.12,
+          "end": 119.14,
+          "confidence": 0.426
+        },
+        {
+          "text": "up",
+          "start": 119.14,
+          "end": 119.16,
+          "confidence": 0.935
+        },
+        {
+          "text": "with",
+          "start": 119.16,
+          "end": 119.8,
+          "confidence": 0.856
+        },
+        {
+          "text": "you",
+          "start": 119.8,
+          "end": 119.82,
+          "confidence": 0.7
+        },
+        {
+          "text": "will",
+          "start": 119.82,
+          "end": 119.88,
+          "confidence": 0.238
+        },
+        {
+          "text": "be",
+          "start": 119.88,
+          "end": 120.14,
+          "confidence": 0.816
+        },
+        {
+          "text": "everything",
+          "start": 120.14,
+          "end": 120.8,
+          "confidence": 0.6
+        },
+        {
+          "text": "I",
+          "start": 120.8,
+          "end": 121.9,
+          "confidence": 0.781
+        },
+        {
+          "text": "need",
+          "start": 121.9,
+          "end": 122.76,
+          "confidence": 0.81
+        },
+        {
+          "text": "in",
+          "start": 122.76,
+          "end": 122.82,
+          "confidence": 0.743
+        },
+        {
+          "text": "this",
+          "start": 122.82,
+          "end": 122.84,
+          "confidence": 0.803
+        },
+        {
+          "text": "world",
+          "start": 122.84,
+          "end": 123.34,
+          "confidence": 0.075
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "seek": 11784,
+      "start": 127.02,
+      "end": 133.83,
+      "text": " I just want to give you the love and that you're missing baby just to wake up with you",
+      "tokens": [
+        50764,
+        286,
+        445,
+        528,
+        281,
+        976,
+        291,
+        264,
+        959,
+        293,
+        300,
+        291,
+        434,
+        5361,
+        3186,
+        445,
+        281,
+        6634,
+        493,
+        365,
+        291,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37775695685184363,
+      "compression_ratio": 2.073170731707317,
+      "no_speech_prob": 0.32794642448425293,
+      "confidence": 0.76,
+      "words": [
+        {
+          "text": "I",
+          "start": 127.02,
+          "end": 127.16,
+          "confidence": 0.124
+        },
+        {
+          "text": "just",
+          "start": 127.16,
+          "end": 127.24,
+          "confidence": 0.329
+        },
+        {
+          "text": "want",
+          "start": 127.24,
+          "end": 127.78,
+          "confidence": 0.899
+        },
+        {
+          "text": "to",
+          "start": 127.78,
+          "end": 128.46,
+          "confidence": 0.905
+        },
+        {
+          "text": "give",
+          "start": 128.46,
+          "end": 128.48,
+          "confidence": 0.9
+        },
+        {
+          "text": "you",
+          "start": 128.48,
+          "end": 128.54,
+          "confidence": 0.98
+        },
+        {
+          "text": "the",
+          "start": 128.54,
+          "end": 128.56,
+          "confidence": 0.812
+        },
+        {
+          "text": "love",
+          "start": 128.56,
+          "end": 128.58,
+          "confidence": 0.978
+        },
+        {
+          "text": "and",
+          "start": 128.58,
+          "end": 128.6,
+          "confidence": 0.906
+        },
+        {
+          "text": "that",
+          "start": 128.6,
+          "end": 128.62,
+          "confidence": 0.942
+        },
+        {
+          "text": "you're",
+          "start": 128.62,
+          "end": 129.82,
+          "confidence": 0.941
+        },
+        {
+          "text": "missing",
+          "start": 129.82,
+          "end": 130.22,
+          "confidence": 0.993
+        },
+        {
+          "text": "baby",
+          "start": 130.22,
+          "end": 130.24,
+          "confidence": 0.96
+        },
+        {
+          "text": "just",
+          "start": 130.24,
+          "end": 130.26,
+          "confidence": 0.45
+        },
+        {
+          "text": "to",
+          "start": 130.26,
+          "end": 130.28,
+          "confidence": 0.97
+        },
+        {
+          "text": "wake",
+          "start": 130.28,
+          "end": 131.08,
+          "confidence": 0.916
+        },
+        {
+          "text": "up",
+          "start": 131.08,
+          "end": 132.76,
+          "confidence": 0.94
+        },
+        {
+          "text": "with",
+          "start": 132.76,
+          "end": 133.46,
+          "confidence": 0.749
+        },
+        {
+          "text": "you",
+          "start": 133.46,
+          "end": 133.83,
+          "confidence": 0.893
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "seek": 11784,
+      "start": 133.83,
+      "end": 142.4,
+      "text": " the second you say you'd like you to I just want to give you the love and that you're missing baby",
+      "tokens": [
+        51164,
+        264,
+        1150,
+        291,
+        584,
+        291,
+        1116,
+        411,
+        291,
+        281,
+        286,
+        445,
+        528,
+        281,
+        976,
+        291,
+        264,
+        959,
+        293,
+        300,
+        291,
+        434,
+        5361,
+        3186,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37775695685184363,
+      "compression_ratio": 2.073170731707317,
+      "no_speech_prob": 0.32794642448425293,
+      "confidence": 0.818,
+      "words": [
+        {
+          "text": "the",
+          "start": 133.83,
+          "end": 134.44,
+          "confidence": 0.218
+        },
+        {
+          "text": "second",
+          "start": 134.44,
+          "end": 134.54,
+          "confidence": 0.532
+        },
+        {
+          "text": "you",
+          "start": 134.54,
+          "end": 135.44,
+          "confidence": 0.9
+        },
+        {
+          "text": "say",
+          "start": 135.44,
+          "end": 135.48,
+          "confidence": 0.938
+        },
+        {
+          "text": "you'd",
+          "start": 135.48,
+          "end": 135.92,
+          "confidence": 0.818
+        },
+        {
+          "text": "like",
+          "start": 135.92,
+          "end": 136.34,
+          "confidence": 0.963
+        },
+        {
+          "text": "you",
+          "start": 136.34,
+          "end": 137.0,
+          "confidence": 0.688
+        },
+        {
+          "text": "to",
+          "start": 137.0,
+          "end": 137.76,
+          "confidence": 0.894
+        },
+        {
+          "text": "I",
+          "start": 137.76,
+          "end": 137.78,
+          "confidence": 0.822
+        },
+        {
+          "text": "just",
+          "start": 137.78,
+          "end": 138.6,
+          "confidence": 0.899
+        },
+        {
+          "text": "want",
+          "start": 138.6,
+          "end": 138.62,
+          "confidence": 0.977
+        },
+        {
+          "text": "to",
+          "start": 138.62,
+          "end": 138.64,
+          "confidence": 0.992
+        },
+        {
+          "text": "give",
+          "start": 138.64,
+          "end": 139.24,
+          "confidence": 0.976
+        },
+        {
+          "text": "you",
+          "start": 139.24,
+          "end": 139.66,
+          "confidence": 0.99
+        },
+        {
+          "text": "the",
+          "start": 139.66,
+          "end": 140.66,
+          "confidence": 0.79
+        },
+        {
+          "text": "love",
+          "start": 140.66,
+          "end": 141.34,
+          "confidence": 0.988
+        },
+        {
+          "text": "and",
+          "start": 141.34,
+          "end": 142.32,
+          "confidence": 0.923
+        },
+        {
+          "text": "that",
+          "start": 142.32,
+          "end": 142.34,
+          "confidence": 0.852
+        },
+        {
+          "text": "you're",
+          "start": 142.34,
+          "end": 142.36,
+          "confidence": 0.943
+        },
+        {
+          "text": "missing",
+          "start": 142.36,
+          "end": 142.38,
+          "confidence": 0.848
+        },
+        {
+          "text": "baby",
+          "start": 142.38,
+          "end": 142.4,
+          "confidence": 0.787
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "seek": 14184,
+      "start": 142.4,
+      "end": 151.93,
+      "text": " then he can and then he got like you, Deezer's a gentleman tell me why are we wasting time on all your",
+      "tokens": [
+        50364,
+        550,
+        415,
+        393,
+        293,
+        550,
+        415,
+        658,
+        411,
+        291,
+        11,
+        1346,
+        4371,
+        260,
+        311,
+        257,
+        15761,
+        980,
+        385,
+        983,
+        366,
+        321,
+        20457,
+        565,
+        322,
+        439,
+        428,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.1130824585755666,
+      "compression_ratio": 1.40625,
+      "no_speech_prob": 0.25646257400512695,
+      "confidence": 0.936,
+      "words": [
+        {
+          "text": "then",
+          "start": 142.4,
+          "end": 142.5,
+          "confidence": 0.489
+        },
+        {
+          "text": "he",
+          "start": 142.5,
+          "end": 142.82,
+          "confidence": 0.973
+        },
+        {
+          "text": "can",
+          "start": 142.82,
+          "end": 143.26,
+          "confidence": 0.759
+        },
+        {
+          "text": "and",
+          "start": 143.26,
+          "end": 144.08,
+          "confidence": 0.969
+        },
+        {
+          "text": "then",
+          "start": 144.08,
+          "end": 144.26,
+          "confidence": 0.992
+        },
+        {
+          "text": "he",
+          "start": 144.26,
+          "end": 144.4,
+          "confidence": 0.969
+        },
+        {
+          "text": "got",
+          "start": 144.4,
+          "end": 144.6,
+          "confidence": 0.995
+        },
+        {
+          "text": "like",
+          "start": 144.6,
+          "end": 144.82,
+          "confidence": 0.995
+        },
+        {
+          "text": "you,",
+          "start": 144.82,
+          "end": 145.16,
+          "confidence": 0.99
+        },
+        {
+          "text": "Deezer's",
+          "start": 145.38,
+          "end": 147.0,
+          "confidence": 0.996
+        },
+        {
+          "text": "a",
+          "start": 147.0,
+          "end": 147.34,
+          "confidence": 0.973
+        },
+        {
+          "text": "gentleman",
+          "start": 147.34,
+          "end": 148.6,
+          "confidence": 0.991
+        },
+        {
+          "text": "tell",
+          "start": 148.6,
+          "end": 149.74,
+          "confidence": 0.809
+        },
+        {
+          "text": "me",
+          "start": 149.74,
+          "end": 149.94,
+          "confidence": 0.993
+        },
+        {
+          "text": "why",
+          "start": 149.94,
+          "end": 150.16,
+          "confidence": 0.991
+        },
+        {
+          "text": "are",
+          "start": 150.16,
+          "end": 150.34,
+          "confidence": 0.961
+        },
+        {
+          "text": "we",
+          "start": 150.34,
+          "end": 150.5,
+          "confidence": 0.983
+        },
+        {
+          "text": "wasting",
+          "start": 150.5,
+          "end": 150.9,
+          "confidence": 0.981
+        },
+        {
+          "text": "time",
+          "start": 150.9,
+          "end": 151.34,
+          "confidence": 0.974
+        },
+        {
+          "text": "on",
+          "start": 151.34,
+          "end": 151.66,
+          "confidence": 0.964
+        },
+        {
+          "text": "all",
+          "start": 151.66,
+          "end": 151.82,
+          "confidence": 0.936
+        },
+        {
+          "text": "your",
+          "start": 151.82,
+          "end": 151.93,
+          "confidence": 0.938
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "seek": 14184,
+      "start": 151.93,
+      "end": 158.66,
+      "text": " wasted crime when you should be with me instead I know I can treat you better",
+      "tokens": [
+        50864,
+        19496,
+        7206,
+        562,
+        291,
+        820,
+        312,
+        365,
+        385,
+        2602,
+        286,
+        458,
+        286,
+        393,
+        2387,
+        291,
+        1101,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.1130824585755666,
+      "compression_ratio": 1.40625,
+      "no_speech_prob": 0.25646257400512695,
+      "confidence": 0.917,
+      "words": [
+        {
+          "text": "wasted",
+          "start": 151.93,
+          "end": 152.42,
+          "confidence": 0.531
+        },
+        {
+          "text": "crime",
+          "start": 152.42,
+          "end": 152.84,
+          "confidence": 0.518
+        },
+        {
+          "text": "when",
+          "start": 152.84,
+          "end": 153.08,
+          "confidence": 0.985
+        },
+        {
+          "text": "you",
+          "start": 153.08,
+          "end": 153.24,
+          "confidence": 0.998
+        },
+        {
+          "text": "should",
+          "start": 153.24,
+          "end": 153.42,
+          "confidence": 0.999
+        },
+        {
+          "text": "be",
+          "start": 153.42,
+          "end": 153.66,
+          "confidence": 0.998
+        },
+        {
+          "text": "with",
+          "start": 153.66,
+          "end": 153.94,
+          "confidence": 0.999
+        },
+        {
+          "text": "me",
+          "start": 153.94,
+          "end": 154.3,
+          "confidence": 0.998
+        },
+        {
+          "text": "instead",
+          "start": 154.3,
+          "end": 154.92,
+          "confidence": 0.987
+        },
+        {
+          "text": "I",
+          "start": 154.92,
+          "end": 155.76,
+          "confidence": 0.953
+        },
+        {
+          "text": "know",
+          "start": 155.76,
+          "end": 155.96,
+          "confidence": 0.999
+        },
+        {
+          "text": "I",
+          "start": 155.96,
+          "end": 156.12,
+          "confidence": 0.996
+        },
+        {
+          "text": "can",
+          "start": 156.12,
+          "end": 156.28,
+          "confidence": 0.999
+        },
+        {
+          "text": "treat",
+          "start": 156.28,
+          "end": 156.68,
+          "confidence": 0.996
+        },
+        {
+          "text": "you",
+          "start": 156.68,
+          "end": 157.42,
+          "confidence": 0.999
+        },
+        {
+          "text": "better",
+          "start": 157.42,
+          "end": 158.66,
+          "confidence": 0.996
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "seek": 15984,
+      "start": 160.64,
+      "end": 162.08,
+      "text": " for I can eat you",
+      "tokens": [
+        50414,
+        337,
+        286,
+        393,
+        1862,
+        291,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.48897249048406427,
+      "compression_ratio": 1.8275862068965518,
+      "no_speech_prob": 0.8963183164596558,
+      "confidence": 0.284,
+      "words": [
+        {
+          "text": "for",
+          "start": 160.64,
+          "end": 160.9,
+          "confidence": 0.095
+        },
+        {
+          "text": "I",
+          "start": 160.9,
+          "end": 161.14,
+          "confidence": 0.335
+        },
+        {
+          "text": "can",
+          "start": 161.14,
+          "end": 161.52,
+          "confidence": 0.65
+        },
+        {
+          "text": "eat",
+          "start": 161.52,
+          "end": 161.78,
+          "confidence": 0.297
+        },
+        {
+          "text": "you",
+          "start": 161.78,
+          "end": 162.08,
+          "confidence": 0.299
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "seek": 15984,
+      "start": 166.38,
+      "end": 167.9,
+      "text": " for I can eat you",
+      "tokens": [
+        50664,
+        337,
+        286,
+        393,
+        1862,
+        291,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.48897249048406427,
+      "compression_ratio": 1.8275862068965518,
+      "no_speech_prob": 0.8963183164596558,
+      "confidence": 0.956,
+      "words": [
+        {
+          "text": "for",
+          "start": 166.38,
+          "end": 166.66,
+          "confidence": 0.912
+        },
+        {
+          "text": "I",
+          "start": 166.66,
+          "end": 166.88,
+          "confidence": 0.966
+        },
+        {
+          "text": "can",
+          "start": 166.88,
+          "end": 167.22,
+          "confidence": 0.969
+        },
+        {
+          "text": "eat",
+          "start": 167.22,
+          "end": 167.56,
+          "confidence": 0.984
+        },
+        {
+          "text": "you",
+          "start": 167.56,
+          "end": 167.9,
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "seek": 15984,
+      "start": 172.2,
+      "end": 173.68,
+      "text": " for I can eat you",
+      "tokens": [
+        50964,
+        337,
+        286,
+        393,
+        1862,
+        291,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.48897249048406427,
+      "compression_ratio": 1.8275862068965518,
+      "no_speech_prob": 0.8963183164596558,
+      "confidence": 0.983,
+      "words": [
+        {
+          "text": "for",
+          "start": 172.2,
+          "end": 172.42,
+          "confidence": 0.962
+        },
+        {
+          "text": "I",
+          "start": 172.42,
+          "end": 172.62,
+          "confidence": 0.991
+        },
+        {
+          "text": "can",
+          "start": 172.62,
+          "end": 173.02,
+          "confidence": 0.987
+        },
+        {
+          "text": "eat",
+          "start": 173.02,
+          "end": 173.34,
+          "confidence": 0.989
+        },
+        {
+          "text": "you",
+          "start": 173.34,
+          "end": 173.68,
+          "confidence": 0.986
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "language_probs": {
+    "en": 0.8209403157234192,
+    "zh": 0.009697267785668373,
+    "de": 0.00562278414145112,
+    "es": 0.005068003665655851,
+    "ru": 0.005934110376983881,
+    "ko": 0.03447698429226875,
+    "fr": 0.0038932734169065952,
+    "ja": 0.004131353460252285,
+    "pt": 0.013945620507001877,
+    "tr": 0.0017984664300456643,
+    "pl": 0.0017596371471881866,
+    "ca": 0.00012698683713097125,
+    "nl": 0.003118714550510049,
+    "ar": 0.0033201805781573057,
+    "sv": 0.0003631382714956999,
+    "it": 0.0008499811519868672,
+    "id": 0.0005538026452995837,
+    "hi": 0.0006478123250417411,
+    "fi": 0.00024289973953273147,
+    "vi": 0.002172640059143305,
+    "he": 0.0001523862301837653,
+    "uk": 0.0005845345440320671,
+    "el": 0.0009258691570721567,
+    "ms": 0.0012420245911926031,
+    "cs": 0.00021008873591199517,
+    "ro": 0.001402292400598526,
+    "da": 0.0006498176953755319,
+    "hu": 0.0002549024356994778,
+    "ta": 0.0005782056832686067,
+    "no": 0.0003031211090274155,
+    "th": 0.0033623913768678904,
+    "ur": 0.0005516625242307782,
+    "hr": 9.052390669239685e-05,
+    "bg": 0.00011431339225964621,
+    "lt": 3.194664168404415e-05,
+    "la": 0.008385485038161278,
+    "mi": 0.000963935861364007,
+    "ml": 0.0003599097835831344,
+    "cy": 0.0049317264929413795,
+    "sk": 4.429561158758588e-05,
+    "te": 0.00035756389843299985,
+    "fa": 0.00022816186537966132,
+    "lv": 8.907890878617764e-05,
+    "bn": 7.703272422077134e-05,
+    "sr": 1.4748688045074232e-05,
+    "az": 1.2446247637853958e-05,
+    "sl": 0.0001446704554837197,
+    "kn": 1.723500645312015e-05,
+    "et": 3.7203622923698276e-05,
+    "mk": 3.3168016670970246e-06,
+    "br": 0.0004177396767772734,
+    "eu": 4.271534635336138e-05,
+    "is": 0.0001525416737422347,
+    "hy": 3.052047031815164e-05,
+    "ne": 5.627971768262796e-05,
+    "mn": 8.544597221771255e-05,
+    "bs": 4.582512701745145e-05,
+    "kk": 2.384524304943625e-05,
+    "sq": 2.06666281883372e-05,
+    "sw": 9.523745393380523e-05,
+    "gl": 9.378891991218552e-05,
+    "mr": 6.016959105181741e-06,
+    "pa": 1.6135974874487147e-05,
+    "si": 0.0004045112291350961,
+    "km": 0.0031632534228265285,
+    "sn": 0.0006603738875128329,
+    "yo": 0.0004334502445999533,
+    "so": 1.987138602999039e-06,
+    "af": 0.00019299282575957477,
+    "oc": 5.983087612548843e-05,
+    "ka": 1.0074838428408839e-05,
+    "be": 5.804119791719131e-05,
+    "tg": 5.808178116240015e-07,
+    "sd": 2.371975097048562e-05,
+    "gu": 1.7341967577522155e-06,
+    "am": 5.881770903215511e-06,
+    "yi": 0.00035634011146612465,
+    "lo": 2.909782233473379e-05,
+    "uz": 3.3025884249582305e-08,
+    "fo": 0.0003680581576190889,
+    "ht": 0.0001872744323918596,
+    "ps": 1.997858635149896e-05,
+    "tk": 2.3795866610498706e-08,
+    "nn": 0.00889603141695261,
+    "mt": 5.1903749408666044e-05,
+    "sa": 0.0003220182843506336,
+    "lb": 6.007169304211857e-07,
+    "my": 0.00014209486835170537,
+    "bo": 4.1263723687734455e-05,
+    "tl": 0.004358305130153894,
+    "mg": 2.5569585559992447e-08,
+    "as": 2.586993332442944e-06,
+    "tt": 5.66342521324259e-07,
+    "haw": 0.021858610212802887,
+    "ln": 4.36901882494567e-06,
+    "ha": 2.4420680233561143e-07,
+    "ba": 2.4123618658222767e-08,
+    "jw": 0.012471788562834263,
+    "su": 5.433933552012604e-07
+  }
+}
