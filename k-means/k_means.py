@@ -11,7 +11,6 @@ pd.options.mode.chained_assignment = None
 from preprocess_dataset import preprocess
 
 
-
 def load_data(csv_file):
     tracks_df = pd.read_csv(csv_file)
 
@@ -120,7 +119,7 @@ def predict(csv_path):
 
 if __name__ == "__main__":
     
-    # train('dataset/spotify_songs.csv')
+    # train('../dataset/spotify_songs.csv')
 
     predict('k_means_result.csv')
    

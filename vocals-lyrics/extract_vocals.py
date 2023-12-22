@@ -7,12 +7,12 @@ if __name__ == '__main__':
 
     separator = Separator('spleeter:2stems')
 
-    directory = './dataset/songs'
+    directory = '../dataset/songs'
     for subdir, dirs, files in os.walk(directory):
         for dir in dirs:
             dir_path = os.path.join(directory, dir)
             for file_name in os.listdir(dir_path):
-                if file_name not in ["vocals.mp3", "accompaniment.mp3"]:
+                if file_name not in ["vocals.mp3", "accompaniment.mp3", "lyrics.json"]:
                     file_path = os.path.join(dir_path, file_name)
 
                     # version 1

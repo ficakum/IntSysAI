@@ -80,7 +80,7 @@ def visualize_features(df):
 
 
 if __name__ == "__main__":
-    dataset = pd.read_csv("dataset/spotify_songs.csv")
+    dataset = pd.read_csv("../dataset/spotify_songs.csv")
 
     print_dataset_info(dataset)
     print_features_info(dataset)

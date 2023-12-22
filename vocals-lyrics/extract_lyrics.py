@@ -7,7 +7,7 @@ if __name__ == '__main__':
     try:
         model = whisper.load_model("base")
 
-        directory = './dataset/songs'
+        directory = '../dataset/songs'
         for subdir, dirs, files in os.walk(directory):
             for dir in dirs:
                 dir_path = os.path.join(directory, dir)

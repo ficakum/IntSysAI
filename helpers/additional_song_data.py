@@ -2,17 +2,20 @@ import requests
 import base64
 import spotipy
 import os
-from dotenv import load_dotenv
+
+import sys
+sys.path.append('../')
+from config import config
 
 
 def get_access_token():
-    client_id = os.getenv("SPOTIFY_CLIENT_ID")
-    client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
+    client_id = config["SPOTIFY_CLIENT_ID"]
+    client_secret = config["SPOTIFY_CLIENT_SECRET"]
 
     client_credentials = f"{client_id}:{client_secret}"
     client_credentials_base64 = base64.b64encode(client_credentials.encode())
 
-    token_url = 'https://accounts.spotify.com/api/token'
+    token_url = config["SPOTIFY_TOKEN_URL"]
     headers = {
         'Authorization': f'Basic {client_credentials_base64.decode()}'
     }
@@ -41,8 +44,6 @@ def get_song_data(track_id, token):
 
 
 if __name__ == '__main__':
-
-    load_dotenv()
 
     access_token = get_access_token()
     get_song_data('5dy3WUywjZcalTno1io8TQ', access_token)
