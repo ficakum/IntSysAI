@@ -25,3 +25,9 @@ pip install matplotlib
 pip install scikit-learn
 
 pip install seaborn
+
+pip install pymongo
+
+MongoDB has something similar know as object document mapper(ODM). MongoEngine is a library that provides a high-level abstraction on top of PyMongo:
+
+pip install mongoengine

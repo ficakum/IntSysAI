@@ -9,8 +9,6 @@
 -playlist_id (string) - Playlist ID
 -playlist_genre (string) - Playlist genre
 -playlist_subgenre (string) - Playlist subgenre
-+release_year (extracted from track_album_release_date)
-
 
 -danceability (double) - Danceability describes how suitable a track is for dancing (0.0 - 1.0)
 -energy (double) - Perceptual measure of intensity (0.0 - 1.0) 

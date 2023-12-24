@@ -8,14 +8,15 @@ import numpy as np
 from sklearn.metrics import silhouette_score
 pd.options.mode.chained_assignment = None 
 
-from preprocess_dataset import preprocess
+import sys
+sys.path.append('../')
+from helpers.preprocess_dataset import *
 
 
 def load_data(csv_file):
     tracks_df = pd.read_csv(csv_file)
 
     return tracks_df
-
 
 
 def elbow_method(points, kmin, kmax):
@@ -52,21 +53,23 @@ def create_clusters(tracks_df, preprocessed_tracks, k, dst_file):
     result = model.fit(preprocessed_tracks)
 
     # save to file
-    tracks_df['cluster'] = result.labels_
-    tracks_df.to_csv(dst_file, index=False)
+    # tracks_df['cluster'] = result.labels_
+    # tracks_df.to_csv(dst_file, index=False)
     
     # visualize clusters
     # tSNE = TSNE(n_components=2)
     # tSNE_result = tSNE.fit_transform(preprocessed_tracks)
 
     # sns.scatterplot(x=tSNE_result[:, 0], y=tSNE_result[:, 1], hue=result.labels_, alpha=0.5, s=7)
+    # plt.show()
 
-    plt.show()
+    return result.labels_
 
 
-def train(csv_path):
-    tracks = load_data(csv_path)
+def train(tracks):
     preprocessed_tracks = preprocess(tracks)
+    preprocessed_tracks = normalize_features(preprocessed_tracks)
+    # preprocessed_tracks = encode_categorical_features(preprocessed_tracks)
 
     columns = ['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 
                'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms', 'release_year']
@@ -78,7 +81,9 @@ def train(csv_path):
     # elbow_method(preprocessed_tracks, kmin, kmax)
     # silhouette_method(preprocessed_tracks, kmin, kmax)
 
-    create_clusters(tracks, preprocessed_tracks, 20, 'k_means_result.csv')
+    clusters = create_clusters(tracks, preprocessed_tracks, 20, 'k_means_result.csv')
+    
+    return clusters
 
 
 def calculate_weighted_popularity(release_date):
@@ -107,9 +112,7 @@ def recommend_songs(tracks_df, playlist):
 
 
 
-def predict(csv_path):
-    tracks = load_data(csv_path)  
-
+def predict(tracks):
     listened_tracks_ids = ['0r7CVbZTWZgbTCYdfa2P31', '2I4jAMEOEUQD5V1byYCqNS', '6fvbl9D9VjMtLRQsuWPyYt', 
            '06Pvy98db25O7wlfFFFIRM', '0WfKDYeUAoLA3vdvLKKWMW']
     listened_tracks = tracks[tracks.track_id.isin(listened_tracks_ids)]
@@ -119,9 +122,11 @@ def predict(csv_path):
 
 if __name__ == "__main__":
     
-    # train('../dataset/spotify_songs.csv')
+    tracks = load_data('../dataset/spotify_songs.csv')
+    # train(tracks)
 
-    predict('k_means_result.csv')
+    # tracks = load_data('k_means_result.csv')
+    # predict(tracks)
    
 
 
