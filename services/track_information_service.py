@@ -66,11 +66,18 @@ def get_recommendations():
     clusters = [track.cluster for track in listened_tracks]
 
     favorite_cluster = mode(clusters)
-    # print(f'Favorite cluster: {favorite_cluster}')
+    print(f'Favorite cluster: {favorite_cluster}')
 
     recommendations = get_by_cluster(favorite_cluster)
     
     return recommendations
+
+
+def get_random_song_name():
+    tracks = get_all()
+    song_name = tracks[100].name
+    
+    return song_name
     
 
 

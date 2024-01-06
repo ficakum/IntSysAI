@@ -10,5 +10,9 @@ config = {
     "MONGODB_NAME": os.getenv("MONGODB_NAME"), 
     "PORT": os.environ.get("PORT", 5000),
     "HOST": os.getenv("HOST"),
-    "SPOTIFY_TOKEN_URL": os.getenv("SPOTIFY_TOKEN_URL")
+    "SPOTIFY_TOKEN_URL": os.getenv("SPOTIFY_TOKEN_URL"),
+    "DROPBOX_APP_KEY": os.getenv("DROPBOX_APP_KEY"),
+    "DROPBOX_APP_SECRET": os.getenv("DROPBOX_APP_SECRET"),
+    "DROPBOX_ACCESS_CODE_GENERATED": os.getenv("DROPBOX_ACCESS_CODE_GENERATED"),
+    "DROPBOX_REFRESH_TOKEN": os.getenv("DROPBOX_REFRESH_TOKEN")
 }

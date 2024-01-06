@@ -3,8 +3,8 @@ from spleeter.separator import Separator
 from spleeter.audio.adapter import AudioAdapter
 from spleeter.audio import Codec
 
-if __name__ == '__main__':
 
+def separate_vocals():
     separator = Separator('spleeter:2stems')
 
     directory = '../dataset/songs'
