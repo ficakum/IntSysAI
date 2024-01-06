@@ -24,16 +24,7 @@ def create_model():
 @app.route('/recommendations', methods=['GET'])
 def recommendations():
     recommended_tracks = get_recommendations()
-    # for track in recommended_tracks:
-    #     print(track.name)
     resp = recommended_tracks.to_json()
-
-    return resp
-
-@app.route('/dropbox_files', methods=['GET'])
-def dropbox_files():
-    files = list_all_files(dbx, "/" + request.args.get('folder'))
-    resp = files.to_json()
 
     return resp
 
