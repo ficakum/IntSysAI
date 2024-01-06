@@ -24,11 +24,15 @@ def get_by_spotify_ids(ids):
 
 def get_and_update(id, cluster):
     track = get_by_id(id)
-    track.cluster=cluster
+    track.cluster = cluster
     track.save()
 
 def update(track, cluster):
-    track.cluster=cluster
+    track.cluster = cluster
+    track.save()
+
+def update_audio_link(track, link):
+    track.audio_link = link
     track.save()
 
 def delete(id):

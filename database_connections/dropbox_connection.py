@@ -19,7 +19,7 @@ def dropbox_connect():
             app_secret = APP_SECRET,
             oauth2_refresh_token = REFRESH_TOKEN
         )
-        print("Connecting successful")
+        print("Dropbox: Connecting successful")
     except AuthError as e:
         print('Error connecting to Dropbox with access token: ' + str(e))
     return dbx

@@ -3,7 +3,7 @@ import sys
 sys.path.append('../')
 from constants.constant import ValidatorConstants, ModelConstants
 
-class TrackInformation (Document):
+class TrackInformation (DynamicDocument):
     meta={'collection': ModelConstants["TRACK_INFORMATION"]}
     
     name = StringField(required=True)
@@ -34,4 +34,4 @@ class TrackInformation (Document):
     tempo = FloatField(required=True)
 
     cluster = IntField(default=ValidatorConstants["TRACK_CLUSTER_DEFAULT"])
-    
+    audio_link = StringField()

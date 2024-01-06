@@ -43,9 +43,12 @@ if __name__ == "__main__":
     dbx = dropbox_connect()
     spotify_app_connect()
 
-    # song_name = get_random_song_name()
-    # download_spotify_song(dbx, song_name, "./dataset/songs/", "/Test/")
-    # get_dropbox_link(dbx, "/Test/Shawn Mendes - Treat You Better.mp3")
+    song = get_random_song()
+    song_link = download_spotify_song(dbx, song.name, "./dataset/songs/", "/songs/")
+    update_song_link(song, song_link)
+
+    song = get_random_song()
+    print(song.to_json())
 
     # app.run(host=config["HOST"], port=int(config["PORT"]))
     

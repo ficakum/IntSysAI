@@ -23,4 +23,4 @@ def download_song(song_name, dst_folder):
 
     os.rename(curr_loc, new_loc)
 
-    return new_loc, file_name + ".mp3"
+    return new_loc, file_name

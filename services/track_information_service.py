@@ -72,12 +72,14 @@ def get_recommendations():
     
     return recommendations
 
+def update_song_link(track, link):
+    update_audio_link(track, link)
 
-def get_random_song_name():
+def get_random_song():
     tracks = get_all()
-    song_name = tracks[100].name
-    
-    return song_name
+    track = tracks[100]
+
+    return track
     
 
 

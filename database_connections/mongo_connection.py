@@ -13,6 +13,7 @@ def mongo_db_connect():
     # print(colls)
 
     # db.drop_collection('Track_Information')
+    print("Mongo: Connecting successful")
 
 def mongo_db_disconnect():
     disconnect()
