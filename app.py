@@ -6,6 +6,7 @@ from config import config
 from database_connections.mongo_connection import *
 from database_connections.dropbox_connection import dropbox_connect
 from database_connections.spotify_app_connection import spotify_app_connect
+from database_connections.spotify_api_connection import spotify_api_connect
 from services.track_information_service import *
 from services.dropbox_service import *
 
@@ -33,10 +34,11 @@ if __name__ == "__main__":
     mongo_db_connect() 
     dbx = dropbox_connect()
     spotify_app_connect()
+    sp = spotify_api_connect()
 
     song = get_random_song()
-    song_link = download_spotify_song(dbx, song.name, "./dataset/songs/", "/songs/")
-    update_song_link(song, song_link)
+    audio_link, img_link = download_spotify_song(dbx, sp, song, "./dataset/songs/", "/songs/")
+    update_song_links(song, audio_link, img_link)
 
     song = get_random_song()
     print(song.to_json())

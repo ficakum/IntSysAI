@@ -36,15 +36,10 @@ def dropbox_download_file(dbx, dropbox_file_path, local_file_path):
         print('Error downloading file from Dropbox: ' + str(e))
 
 
-def dropbox_upload_file(dbx, file_name, local_file_path, dropbox_folder_path):
-    """
-    Example:
-        dropbox_upload_file('.', 'test.csv', '/stuff/test.csv')
-    """
-
+def dropbox_upload_file(dbx, file_name, local_file_path, dropbox_folder_path, ext):
     try:
         local_file_path = pathlib.Path(local_file_path)
-        dropbox_file_path = dropbox_folder_path + file_name + "/" + file_name + ".mp3"
+        dropbox_file_path = dropbox_folder_path + "/" + file_name + ext
 
         with local_file_path.open("rb") as f:
             meta = dbx.files_upload(f.read(), dropbox_file_path, mode=dropbox.files.WriteMode("overwrite"))

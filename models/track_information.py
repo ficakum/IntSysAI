@@ -35,3 +35,4 @@ class TrackInformation (DynamicDocument):
 
     cluster = IntField(default=ValidatorConstants["TRACK_CLUSTER_DEFAULT"])
     audio_link = StringField()
+    album_cover_link = StringField()

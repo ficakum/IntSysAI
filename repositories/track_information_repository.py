@@ -31,8 +31,9 @@ def update(track, cluster):
     track.cluster = cluster
     track.save()
 
-def update_audio_link(track, link):
-    track.audio_link = link
+def update_links(track, audio_link, img_link):
+    track.audio_link = audio_link
+    track.album_cover_link = img_link
     track.save()
 
 def delete(id):

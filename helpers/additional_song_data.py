@@ -1,49 +1,14 @@
 import requests
-import base64
-import spotipy
-import os
-
-import sys
-sys.path.append('../')
-from config import config
 
 
-def get_access_token():
-    client_id = config["SPOTIFY_CLIENT_ID"]
-    client_secret = config["SPOTIFY_CLIENT_SECRET"]
-
-    client_credentials = f"{client_id}:{client_secret}"
-    client_credentials_base64 = base64.b64encode(client_credentials.encode())
-
-    token_url = config["SPOTIFY_TOKEN_URL"]
-    headers = {
-        'Authorization': f'Basic {client_credentials_base64.decode()}'
-    }
-    data = {
-        'grant_type': 'client_credentials'
-    }
-    response = requests.post(token_url, data=data, headers=headers)
-
-    if response.status_code == 200:
-        access_token = response.json()['access_token']
-        print("Access token obtained successfully.")
-
-        return access_token
-    else:
-        print("Error obtaining access token.")
-        exit()
-
-
-def get_song_data(track_id, token):
-    sp = spotipy.Spotify(auth=token)
-
+def download_cover_img(track_id, sp):
     track_info = sp.track(track_id)
+    album_info = track_info["album"]
+    images = album_info["images"]
+    image_names = ["cover_640x640.jpg", "cover_300x300.jpg", "cover_64x64.jpg"]
 
-    for key, value in track_info.items():
-        print(f"{key}: {value}")
-
-
-if __name__ == '__main__':
-
-    access_token = get_access_token()
-    get_song_data('5dy3WUywjZcalTno1io8TQ', access_token)
+    for value, name in zip(images, image_names):
+        print(value)
+        img_data = requests.get(value["url"]).content
+        with open(name, 'wb') as handler:
+            handler.write(img_data)
