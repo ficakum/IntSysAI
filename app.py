@@ -4,17 +4,16 @@ from flask_cors import CORS
 
 from config import config
 from database_connections.mongo_connection import *
+from database_connections.dropbox_connection import dropbox_connect
+from database_connections.spotify_app_connection import spotify_app_connect
 from services.track_information_service import *
+from services.dropbox_service import *
+
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"*": {"origins": "*"}})
 api = Api(app)
 
-@app.route('/load_dataset', methods=['POST'])
-def load_dataset():
-    load_from_csv("dataset/spotify_songs.csv")
-
-    return jsonify("Load dataset: Finished")
 
 @app.route('/create_model', methods=['PUT'])
 def create_model():
@@ -31,13 +30,22 @@ def recommendations():
 
     return resp
 
+@app.route('/dropbox_files', methods=['GET'])
+def dropbox_files():
+    files = list_all_files(dbx, "/" + request.args.get('folder'))
+    resp = files.to_json()
+
+    return resp
+
 
 if __name__ == "__main__":
-    db_connect() 
+    mongo_db_connect() 
+    dbx = dropbox_connect()
+    spotify_app_connect()
 
-    # tracks = get_all()
-    # for track in tracks:
-    #     print(track.cluster)
+    # song_name = get_random_song_name()
+    # download_spotify_song(dbx, song_name, "./dataset/songs/", "/Test/")
+    # get_dropbox_link(dbx, "/Test/Shawn Mendes - Treat You Better.mp3")
 
-    app.run(host=config["HOST"], port=int(config["PORT"]))
+    # app.run(host=config["HOST"], port=int(config["PORT"]))
     
