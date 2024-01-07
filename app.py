@@ -38,10 +38,10 @@ if __name__ == "__main__":
 
     song = get_random_song()
     audio_link, img_link = download_spotify_song(dbx, sp, song, "./dataset/songs/", "/songs/")
-    update_song_links(song, audio_link, img_link)
+    # update_song_links(song, audio_link, img_link)
 
-    song = get_random_song()
-    print(song.to_json())
+    # song = get_random_song()
+    # print(song.to_json())
 
     # app.run(host=config["HOST"], port=int(config["PORT"]))
     
