@@ -55,7 +55,7 @@ def create_recommendation_model():
     clusters = train(tracks_df)
 
     for i, cluster in enumerate(clusters):
-        update(tracks[i], cluster)
+        update_cluster(tracks[i], cluster)
 
 
 def get_recommendations():
@@ -72,12 +72,12 @@ def get_recommendations():
     
     return recommendations
 
-def update_song_links(track, audio_link, img_link):
-    update_links(track, audio_link, img_link)
+def update_song_links(track, audio_link, vocals_link, instrumental_link, img_link):
+    update_links(track, audio_link, vocals_link, instrumental_link, img_link)
 
 def get_random_song():
     tracks = get_all()
-    track = tracks[100]
+    track = tracks[105]
 
     return track
     

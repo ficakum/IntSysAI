@@ -1,6 +1,8 @@
 from mongoengine import *
 from models.track import Track
-from ..constants.constant import ValidatorConstants, ModelConstants
+import sys
+sys.path.append('../')
+from constants.constant import ValidatorConstants, ModelConstants
 
 class Group (Document):
     meta={'collection': ModelConstants["GROUP"]}

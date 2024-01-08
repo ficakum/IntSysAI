@@ -3,39 +3,68 @@ sys.path.append('../')
 from models.track_information import TrackInformation
 
 
-def add(track):    
-    track.save()
+def add(track): 
+    try:   
+        track.save()
+
+    except Exception as e:
+        print('TRACK_INFORMATION - Error adding: ' + str(e))
 
 def get_all():
-    tracks = TrackInformation.objects
-    return tracks
+    try:
+        tracks = TrackInformation.objects
+        return tracks
+    
+    except Exception as e:
+        print('TRACK_INFORMATION - Error getting all: ' + str(e))
 
 def get_by_id(id):
-    track = TrackInformation.objects.filter(id=id).first()
-    return track
+    try:
+        track = TrackInformation.objects.filter(id=id).first()
+        return track
+    
+    except Exception as e:
+        print('TRACK_INFORMATION - Error getting by id: ' + str(e))
 
 def get_by_cluster(cluster):
-    tracks = TrackInformation.objects.filter(cluster=cluster).limit(10)
-    return tracks
+    try:
+        tracks = TrackInformation.objects.filter(cluster=cluster).limit(10)
+        return tracks
+    
+    except Exception as e:
+        print('TRACK_INFORMATION - Error getting by cluster: ' + str(e))
 
 def get_by_spotify_ids(ids):
-    tracks = TrackInformation.objects.filter(externalId__in=ids)
-    return tracks
+    try:
+        tracks = TrackInformation.objects.filter(externalId__in=ids)
+        return tracks
+    
+    except Exception as e:
+        print('TRACK_INFORMATION - Error getting by spotify ids: ' + str(e))
 
-def get_and_update(id, cluster):
-    track = get_by_id(id)
-    track.cluster = cluster
-    track.save()
+def update_cluster(track, cluster):
+    try:
+        track.cluster = cluster
+        track.save()
 
-def update(track, cluster):
-    track.cluster = cluster
-    track.save()
+    except Exception as e:
+        print('TRACK_INFORMATION - Error updating cluster: ' + str(e))
 
-def update_links(track, audio_link, img_link):
-    track.audio_link = audio_link
-    track.album_cover_link = img_link
-    track.save()
+def update_links(track, audio_link, vocals_link, instrumental_link, img_link):
+    try:
+        track.audio_link = audio_link
+        track.vocals_link = vocals_link
+        track.instrumental_link = instrumental_link
+        track.album_cover_link = img_link
+        track.save()
+    
+    except Exception as e:
+        print('TRACK_INFORMATION - Error updating links: ' + str(e))
 
 def delete(id):
-    track = get_by_id(id)
-    track.delete()
+    try:
+        track = get_by_id(id)
+        track.delete()
+
+    except Exception as e:
+        print('TRACK_INFORMATION - Error deleting: ' + str(e))

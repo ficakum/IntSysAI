@@ -1,19 +1,20 @@
 from mongoengine import *
 from mongoengine.connection import disconnect
-
 import sys
 sys.path.append('../')
 from config import config
 
 def mongo_db_connect():
-    con = connect(host=config["MONGODB_CONNECTION"] + config["MONGODB_NAME"])
-    db = con.get_database(config["MONGODB_NAME"])
+    try:
+        con = connect(host=config["MONGODB_CONNECTION"] + config["MONGODB_NAME"])
+        db = con.get_database(config["MONGODB_NAME"])
 
-    # colls = db.list_collection_names()
-    # print(colls)
+        print("Mongo: Connecting successful")
 
-    # db.drop_collection('Track_Information')
-    print("Mongo: Connecting successful")
+        return db
+    
+    except Exception as e:
+        print("Mongo - Error connecting: " + str(e))
 
 def mongo_db_disconnect():
     disconnect()

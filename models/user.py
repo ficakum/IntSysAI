@@ -1,6 +1,8 @@
 from mongoengine import *
 from models.group import Group
-from ..constants.constant import ValidatorConstants, ModelConstants
+import sys
+sys.path.append('../')
+from constants.constant import ValidatorConstants, ModelConstants
 
 class User (Document):
     meta={'collection': ModelConstants["USER"]}

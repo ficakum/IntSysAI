@@ -1,4 +1,3 @@
-import pathlib
 import pandas as pd
 import dropbox
 
@@ -7,6 +6,7 @@ def dropbox_list_files(dbx, path):
     try:
         files = dbx.files_list_folder(path).entries
         files_list = []
+
         for file in files:
             if isinstance(file, dropbox.files.FileMetadata):
                 metadata = {
@@ -22,32 +22,31 @@ def dropbox_list_files(dbx, path):
         return df.sort_values(by='server_modified', ascending=False)
 
     except Exception as e:
-        print('Error getting list of files from Dropbox: ' + str(e))
-
+        print('Dropbox - Error getting list of files: ' + str(e))
 
 
 def dropbox_download_file(dbx, dropbox_file_path, local_file_path):
     try:
         with open(local_file_path, 'wb') as f:
-            metadata, result = dbx.files_download(path=dropbox_file_path)
+            _, result = dbx.files_download(path=dropbox_file_path)
             f.write(result.content)
 
     except Exception as e:
-        print('Error downloading file from Dropbox: ' + str(e))
+        print('Dropbox - Error downloading file: ' + str(e))
 
 
-def dropbox_upload_file(dbx, file_name, local_file_path, dropbox_folder_path, ext):
+def dropbox_upload_file(dbx, file_name, local_folder_path, dropbox_folder_path):
     try:
-        local_file_path = pathlib.Path(local_file_path)
-        dropbox_file_path = dropbox_folder_path + "/" + file_name + ext
+        local_file_path = local_folder_path + "/" + file_name
+        dropbox_file_path = dropbox_folder_path + "/" + file_name
 
-        with local_file_path.open("rb") as f:
-            meta = dbx.files_upload(f.read(), dropbox_file_path, mode=dropbox.files.WriteMode("overwrite"))
+        with open(local_file_path, "rb") as f:
+            dbx.files_upload(f.read(), dropbox_file_path, mode=dropbox.files.WriteMode("overwrite"))
 
-            return meta, dropbox_file_path
+            return dropbox_file_path
         
     except Exception as e:
-        print('Error uploading file to Dropbox: ' + str(e))
+        print('Dropbox - Error uploading file: ' + str(e))
 
 
 def dropbox_get_link(dbx, dropbox_file_path):

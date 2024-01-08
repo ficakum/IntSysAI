@@ -1,14 +1,17 @@
-import os
+import sys
 from spleeter.separator import Separator
 from spleeter.audio import Codec
 
 
-def separate_vocals(directory):
-    separator = Separator('spleeter:2stems')
+def separate_vocals(directory, file_path):
+    try:
+        separator = Separator("spleeter:2stems")
+        separator.separate_to_file(file_path, directory, codec=Codec.MP3)
+        
+        print("Spleeter: Extracting done successfully.")
 
-    for _, dirs, _ in os.walk(directory):
-        for dir in dirs:
-            dir_path = os.path.join(directory, dir)
-            file_path = os.path.join(dir_path, dir + ".mp3")
+    except Exception as e:
+        print('Spleeter - Error extracting: ' + str(e))
 
-            separator.separate_to_file(file_path, directory, codec=Codec.MP3)
+if __name__ == "__main__":
+    separate_vocals(sys.argv[1], sys.argv[2])

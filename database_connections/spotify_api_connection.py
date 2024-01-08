@@ -24,16 +24,21 @@ def get_access_token():
 
     if response.status_code == 200:
         access_token = response.json()['access_token']
-        print("Spotify API: Access token obtained successfully.")
 
         return access_token
+    
     else:
         print("Error obtaining access token.")
         exit()
 
 def spotify_api_connect():
-    access_token = get_access_token()
-    sp = spotipy.Spotify(auth=access_token)
+    try:
+        access_token = get_access_token()
+        sp = spotipy.Spotify(auth=access_token)
 
-    return sp
+        print("Spotify API: Connecting successful")
 
+        return sp
+    
+    except Exception as e:
+        print("Spotify API - Error connecting: " + str(e))
