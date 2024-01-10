@@ -17,15 +17,22 @@ cors = CORS(app, resources={r"*": {"origins": "*"}})
 api = Api(app)
 
 
-@app.route('/create_model', methods=['PUT'])
-def create_model():
-    create_recommendation_model()
+@app.route('/create_recommendation_model', methods=['PUT'])
+def create_recommendation_model():
+    create_k_means_model("./k_means/k_means_model.joblib")
 
-    return jsonify("Create model: Finished")
+    return "K-means model created."
 
-@app.route('/recommendations', methods=['GET'])
-def recommendations():
-    recommended_tracks = get_recommendations()
+@app.route('/predict_cluster/<track_info_id>', methods=['PUT'])
+def predict_cluster(track_info_id):
+    cluster = predict_track_cluster(track_info_id, "./k_means/k_means_model.joblib")
+    resp = {"cluster": int(cluster)}
+
+    return resp
+
+@app.route('/recommendations/<num>', methods=['GET'])
+def recommendations(num):
+    recommended_tracks = get_recommendations(int(num))
     resp = recommended_tracks.to_json()
 
     return resp
@@ -33,7 +40,6 @@ def recommendations():
 @app.route('/lyrics/<track_info_id>', methods=['GET'])
 def lyrics(track_info_id):
     lyr = get_song_lyrics(track_info_id)
-    print(lyr.text)
     resp = lyr.to_json()
 
     return resp
@@ -60,7 +66,5 @@ if __name__ == "__main__":
     # song = get_random_song()
     # print(song.to_json())
 
-
     app.run(host=config["HOST"], port=int(config["PORT"]))   
-     
      

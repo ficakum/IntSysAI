@@ -11,14 +11,12 @@ def normalize_features(df):
 
     return df
 
-
 def encode_categorical_features(df):
     df = pd.get_dummies(df, columns = ['playlist_genre'])     
 
     return df
 
-
-def preprocess(df):
+def prepare_dataset(df):
     df.dropna(inplace=True)
 
     df.drop_duplicates(subset=['track_id'], keep='first', inplace=True)
@@ -31,7 +29,14 @@ def preprocess(df):
 
     return df
 
+def preprocess(df):
+    preprocessed_df = prepare_dataset(df)
+    preprocessed_df = normalize_features(preprocessed_df)
+    # preprocessed_df = encode_categorical_features(preprocessed_df)
 
+    columns = ['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 
+               'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms', 'release_year']
 
+    preprocessed_df = preprocessed_df[columns]
 
-
+    return preprocessed_df

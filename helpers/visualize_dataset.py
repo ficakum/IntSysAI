@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from preprocess_dataset import preprocess
+from preprocess_dataset import prepare_dataset
 
 
 def print_dataset_info(df):
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     print_features_info(dataset)
     visualize_features(dataset)
 
-    dataset = preprocess(dataset)
+    dataset = prepare_dataset(dataset)
 
     print_dataset_info(dataset)
     print_features_info(dataset)

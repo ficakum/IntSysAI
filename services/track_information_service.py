@@ -4,7 +4,7 @@ import sys
 sys.path.append('../')
 from helpers.preprocess_dataset import preprocess 
 from repositories.track_information_repository import *
-from k_means.k_means import train 
+from k_means.k_means import train, predict
 
 
 def load_from_csv(csv_file):
@@ -20,24 +20,31 @@ def load_from_csv(csv_file):
             df.loc[i, "acousticness"], df.loc[i, "instrumentalness"], df.loc[i, "liveness"], df.loc[i, "valence"],
             df.loc[i, "tempo"])
 
-def create_recommendation_model():
+def create_k_means_model(model_path):
     tracks = get_all()
 
     tracks_df = pd.DataFrame.from_records([track.to_mongo() for track in tracks])
-    tracks_df.columns = ['_id', 'track_name', 'track_artist', 'playlist_genre', 'track_id', 'duration_ms', 'track_popularity',
-                         'track_album_id', 'track_album_name', 'track_album_release_date', 'playlist_name', 'playlist_id',
-                         'playlist_genre', 'playlist_subgenre', 'danceability', 'energy', 'key', 'loudness', 'mode',
-                         'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'cluster']
+    tracks_df.columns = get_columns()
+    tracks_df.drop(["audio_link", "vocals_link", "instrumental_link", "album_cover_link"], axis=1, inplace=True)
 
-    print(tracks_df.info())
-
-    clusters = train(tracks_df)
+    clusters = train(tracks_df, model_path)
 
     for i, cluster in enumerate(clusters):
         update_cluster(tracks[i], cluster)
 
+def predict_track_cluster(track_info_id, model_path):
+    track = get_by_id(track_info_id)
 
-def get_recommendations():
+    track_df = pd.DataFrame.from_records([track.to_mongo()])
+    track_df.columns = get_columns()
+    track_df.drop(["audio_link", "vocals_link", "instrumental_link", "album_cover_link"], axis=1, inplace=True)
+
+    cluster = predict(track_df, model_path)[0]
+    update_cluster(track_info_id, cluster)
+
+    return cluster
+
+def get_recommendations(num):
     listened_tracks_ids = ['0r7CVbZTWZgbTCYdfa2P31', '2I4jAMEOEUQD5V1byYCqNS', '6fvbl9D9VjMtLRQsuWPyYt', 
            '06Pvy98db25O7wlfFFFIRM', '0WfKDYeUAoLA3vdvLKKWMW']
     
@@ -47,7 +54,7 @@ def get_recommendations():
     favorite_cluster = mode(clusters)
     print(f'Favorite cluster: {favorite_cluster}')
 
-    recommendations = get_by_cluster(favorite_cluster)
+    recommendations = get_by_cluster(favorite_cluster, num)
     
     return recommendations
 
@@ -59,7 +66,3 @@ def get_random_song():
     track = tracks[101]
 
     return track
-    
-
-
-

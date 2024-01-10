@@ -54,9 +54,9 @@ def get_by_id(id):
     except Exception as e:
         print('TRACK_INFORMATION - Error getting by id: ' + str(e))
 
-def get_by_cluster(cluster):
+def get_by_cluster(cluster, num):
     try:
-        tracks = TrackInformation.objects.filter(cluster=cluster).limit(10)
+        tracks = TrackInformation.objects.filter(cluster=cluster).limit(num)
         return tracks
     
     except Exception as e:
@@ -96,3 +96,10 @@ def delete(id):
 
     except Exception as e:
         print('TRACK_INFORMATION - Error deleting: ' + str(e))
+
+def get_columns():
+    return ['_id', 'track_name', 'track_artist', 'playlist_genre', 'track_id', 'duration_ms', 'track_popularity',
+                         'track_album_id', 'track_album_name', 'track_album_release_date', 'playlist_name', 'playlist_id',
+                         'playlist_genre', 'playlist_subgenre', 'danceability', 'energy', 'key', 'loudness', 'mode',
+                         'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'cluster', 'audio_link',
+                         'vocals_link', 'instrumental_link', 'album_cover_link']
