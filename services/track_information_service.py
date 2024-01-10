@@ -2,44 +2,23 @@ import pandas as pd
 from statistics import mode
 import sys
 sys.path.append('../')
-from models.track_information import TrackInformation
 from helpers.preprocess_dataset import preprocess 
 from repositories.track_information_repository import *
 from k_means.k_means import train 
 
 
 def load_from_csv(csv_file):
-    tracks_df = pd.read_csv(csv_file)
-    tracks_df = preprocess(tracks_df).reset_index(drop=True)
+    df = pd.read_csv(csv_file)
+    df = preprocess(df).reset_index(drop=True)
 
-    for i in tracks_df.index:
-        track_info = TrackInformation(
-            name=tracks_df.loc[i, "track_name"],
-            author=tracks_df.loc[i, "track_artist"],
-            genre=tracks_df.loc[i, "playlist_genre"],
-            externalId=tracks_df.loc[i, "track_id"],
-            duration=tracks_df.loc[i, "duration_ms"], 
-            popularity=tracks_df.loc[i, "track_popularity"],
-            album_id=tracks_df.loc[i, "track_album_id"],
-            album_name=tracks_df.loc[i, "track_album_name"],
-            album_release_date=str(tracks_df.loc[i, "track_album_release_date"]),
-            playlist_name=tracks_df.loc[i, "playlist_name"],
-            playlist_id=tracks_df.loc[i, "playlist_id"],
-            playlist_genre=tracks_df.loc[i, "playlist_genre"],
-            playlist_subgenre=tracks_df.loc[i, "playlist_subgenre"],
-            danceability=tracks_df.loc[i, "danceability"],
-            energy=tracks_df.loc[i, "energy"],
-            key=tracks_df.loc[i, "key"],
-            loudness=tracks_df.loc[i, "loudness"],
-            mode=tracks_df.loc[i, "mode"],
-            speechiness=tracks_df.loc[i, "speechiness"],
-            acousticness=tracks_df.loc[i, "acousticness"],
-            instrumentalness=tracks_df.loc[i, "instrumentalness"],
-            liveness=tracks_df.loc[i, "liveness"],
-            valence=tracks_df.loc[i, "valence"],
-            tempo=tracks_df.loc[i, "tempo"])
-        
-        add(track_info)
+    for i in df.index:         
+        add(df.loc[i, "track_name"], df.loc[i, "track_artist"], df.loc[i, "playlist_genre"], df.loc[i, "track_id"],
+            df.loc[i, "duration_ms"], df.loc[i, "track_popularity"], df.loc[i, "track_album_id"], df.loc[i, "track_album_name"],
+            df.loc[i, "track_album_release_date"], df.loc[i, "playlist_name"], df.loc[i, "playlist_id"],
+            df.loc[i, "playlist_genre"], df.loc[i, "playlist_subgenre"], df.loc[i, "danceability"], df.loc[i, "energy"],
+            df.loc[i, "key"], df.loc[i, "loudness"], df.loc[i, "mode"], df.loc[i, "speechiness"],
+            df.loc[i, "acousticness"], df.loc[i, "instrumentalness"], df.loc[i, "liveness"], df.loc[i, "valence"],
+            df.loc[i, "tempo"])
 
 def create_recommendation_model():
     tracks = get_all()
@@ -77,7 +56,7 @@ def update_song_links(track, audio_link, vocals_link, instrumental_link, img_lin
 
 def get_random_song():
     tracks = get_all()
-    track = tracks[105]
+    track = tracks[101]
 
     return track
     

@@ -9,6 +9,7 @@ from database_connections.spotify_app_connection import spotify_app_connect
 from database_connections.spotify_api_connection import spotify_api_connect
 from services.track_information_service import *
 from services.dropbox_service import *
+from services.lyrics_service import *
 
 
 app = Flask(__name__)
@@ -29,6 +30,14 @@ def recommendations():
 
     return resp
 
+@app.route('/lyrics/<track_info_id>', methods=['GET'])
+def lyrics(track_info_id):
+    lyr = get_song_lyrics(track_info_id)
+    print(lyr.text)
+    resp = lyr.to_json()
+
+    return resp
+
 
 if __name__ == "__main__":
     db = mongo_db_connect() 
@@ -41,15 +50,17 @@ if __name__ == "__main__":
     spotify_app_connect()
     sp = spotify_api_connect()
 
-    song = get_random_song()
-    curr_dir = os.getcwd()
-    venv_python = curr_dir + "/.spleeter_venv/Scripts/python"
-    script = curr_dir + "/audio/extract_vocals.py"
-    audio_link, vocals_link, instrumental_link, img_link = download_spotify_song(dbx, sp, song, "dataset/songs/", "/songs/", venv_python, script)
+    # song = get_random_song()
+    # curr_dir = os.getcwd()
+    # venv_python = curr_dir + "/.spleeter_venv/Scripts/python"
+    # script = curr_dir + "/audio/extract_vocals.py"
+    # audio_link, vocals_link, instrumental_link, img_link, lyrics = download_spotify_song(dbx, sp, song, "dataset/songs/", "/songs/", venv_python, script)
     # update_song_links(song, audio_link, vocals_link, instrumental_link, img_link)
+    # add_song_lyrics(song, lyrics)
     # song = get_random_song()
     # print(song.to_json())
 
-    # app.run(host=config["HOST"], port=int(config["PORT"]))   
+
+    app.run(host=config["HOST"], port=int(config["PORT"]))   
      
      

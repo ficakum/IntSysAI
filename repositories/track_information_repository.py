@@ -3,9 +3,37 @@ sys.path.append('../')
 from models.track_information import TrackInformation
 
 
-def add(track): 
+def add(name, author, genre, externalId, duration, popularity, album_id, album_name, album_release_date, playlist_name,
+         playlist_id, playlist_genre, playlist_subgenre, danceability, energy, key, loudness, mode, speechiness, 
+         acousticness, instrumentalness, liveness, valence, tempo): 
     try:   
-        track.save()
+        track_info = TrackInformation(
+            name=name,
+            author=author,
+            genre=genre,
+            externalId=externalId,
+            duration=duration, 
+            popularity=popularity,
+            album_id=album_id,
+            album_name=album_name,
+            album_release_date=str(album_release_date),
+            playlist_name=playlist_name,
+            playlist_id=playlist_id,
+            playlist_genre=playlist_genre,
+            playlist_subgenre=playlist_subgenre,
+            danceability=danceability,
+            energy=energy,
+            key=key,
+            loudness=loudness,
+            mode=mode,
+            speechiness=speechiness,
+            acousticness=acousticness,
+            instrumentalness=instrumentalness,
+            liveness=liveness,
+            valence=valence,
+            tempo=tempo)
+                
+        track_info.save()
 
     except Exception as e:
         print('TRACK_INFORMATION - Error adding: ' + str(e))
