@@ -1,9 +1,9 @@
 ModelConstants = {
-    "USER" : 'User',
-    "TRACK" : 'Track',
-    "GROUP" : 'Group',
-    "TRACK_INFORMATION" : 'Track_Information',
-    "LYRICS" : "Lyrics"
+    "USER" : 'users',
+    "TRACK" : 'tracks',
+    "GROUP" : 'groups',
+    "TRACK_INFORMATION" : 'track_informations',
+    "LYRICS" : "lyrics"
 }
 
 ValidatorConstants = {

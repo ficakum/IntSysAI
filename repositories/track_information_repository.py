@@ -40,7 +40,7 @@ def add(name, author, genre, externalId, duration, popularity, album_id, album_n
 
 def get_all():
     try:
-        tracks = TrackInformation.objects
+        tracks = TrackInformation.objects.order_by('name')
         return tracks
     
     except Exception as e:
@@ -78,12 +78,19 @@ def update_cluster(track, cluster):
     except Exception as e:
         print('TRACK_INFORMATION - Error updating cluster: ' + str(e))
 
-def update_links(track, audio_link, vocals_link, instrumental_link, img_link):
+def update_album_cover_link(track, img_link):
+    try:
+        track.album_cover_link = img_link
+        track.save()
+
+    except Exception as e:
+        print('TRACK_INFORMATION - Error updating album cover link: ' + str(e))
+
+def update_links(track, audio_link, vocals_link, instrumental_link):
     try:
         track.audio_link = audio_link
         track.vocals_link = vocals_link
         track.instrumental_link = instrumental_link
-        track.album_cover_link = img_link
         track.save()
     
     except Exception as e:

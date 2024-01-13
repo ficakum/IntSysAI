@@ -1,17 +1,21 @@
 import pandas as pd
 from statistics import mode
+import random
 import sys
 sys.path.append('../')
-from helpers.preprocess_dataset import preprocess 
+from helpers.preprocess_dataset import prepare_dataset 
 from repositories.track_information_repository import *
 from k_means.k_means import train, predict
 
 
-def load_from_csv(csv_file):
+def load_from_csv(csv_file, sample_size):
     df = pd.read_csv(csv_file)
-    df = preprocess(df).reset_index(drop=True)
+    df = prepare_dataset(df).reset_index(drop=True)
 
-    for i in df.index:         
+    indexes = list(df.index)
+    indexes = random.sample(indexes, sample_size)
+
+    for i in indexes:         
         add(df.loc[i, "track_name"], df.loc[i, "track_artist"], df.loc[i, "playlist_genre"], df.loc[i, "track_id"],
             df.loc[i, "duration_ms"], df.loc[i, "track_popularity"], df.loc[i, "track_album_id"], df.loc[i, "track_album_name"],
             df.loc[i, "track_album_release_date"], df.loc[i, "playlist_name"], df.loc[i, "playlist_id"],
@@ -40,11 +44,11 @@ def predict_track_cluster(track_info_id, model_path):
     track_df.drop(["audio_link", "vocals_link", "instrumental_link", "album_cover_link"], axis=1, inplace=True)
 
     cluster = predict(track_df, model_path)[0]
-    update_cluster(track_info_id, cluster)
+    update_cluster(track, cluster)
 
     return cluster
 
-def get_recommendations(num):
+def get_recommendations(group_id, num):
     listened_tracks_ids = ['0r7CVbZTWZgbTCYdfa2P31', '2I4jAMEOEUQD5V1byYCqNS', '6fvbl9D9VjMtLRQsuWPyYt', 
            '06Pvy98db25O7wlfFFFIRM', '0WfKDYeUAoLA3vdvLKKWMW']
     
@@ -58,11 +62,13 @@ def get_recommendations(num):
     
     return recommendations
 
-def update_song_links(track, audio_link, vocals_link, instrumental_link, img_link):
-    update_links(track, audio_link, vocals_link, instrumental_link, img_link)
+def update_audio_links(track, audio_link, vocals_link, instrumental_link):
+    update_links(track, audio_link, vocals_link, instrumental_link)
 
-def get_random_song():
+def update_img_link(track, img_link):
+    update_album_cover_link(track, img_link)
+
+def get_all_songs():
     tracks = get_all()
-    track = tracks[101]
 
-    return track
+    return tracks

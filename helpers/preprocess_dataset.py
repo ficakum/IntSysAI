@@ -22,15 +22,18 @@ def prepare_dataset(df):
     df.drop_duplicates(subset=['track_id'], keep='first', inplace=True)
     df.drop_duplicates(subset=['track_name'], keep='first', inplace=True)
 
-    df['track_album_release_date'] = pd.to_datetime(df['track_album_release_date'])
+    # df['track_album_release_date'] = pd.to_datetime(df['track_album_release_date'])
 
-    years = df["track_album_release_date"].dt.year
-    df["release_year"] = years
+    # years = df["track_album_release_date"].dt.year
+    # df["release_year"] = years
 
     return df
 
 def preprocess(df):
     preprocessed_df = prepare_dataset(df)
+    preprocessed_df['track_album_release_date'] = pd.to_datetime(preprocessed_df['track_album_release_date'])
+    years = preprocessed_df["track_album_release_date"].dt.year
+    preprocessed_df["release_year"] = years
     preprocessed_df = normalize_features(preprocessed_df)
     # preprocessed_df = encode_categorical_features(preprocessed_df)
 
