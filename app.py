@@ -35,7 +35,10 @@ def predict_song_cluster(track_info_id):
 @app.route('/song_recommendations/<group_id>', methods=['GET'])
 def song_recommendations(group_id):
     playlist = get_group_playlist(group_id)
-    recommended_tracks = get_song_recommendations(playlist, conf["RECOMMENDATIONS_NUM"])
+    if len(playlist) > 0:
+        recommended_tracks = get_song_recommendations(playlist, conf["RECOMMENDATIONS_NUM"])
+    else:
+        recommended_tracks = get_random_song_recommendations(conf["RECOMMENDATIONS_NUM"])
     resp = recommended_tracks.to_json()
 
     return resp
@@ -56,7 +59,10 @@ def predict_group_cluster(group_id):
 @app.route('/group_recommendations/<user_id>', methods=['GET'])
 def group_recommendations(user_id):
     user_playlist = get_listened_songs(user_id)
-    recommended_groups = get_group_recommendations(user_playlist, conf["RECOMMENDATIONS_NUM"], conf["GROUP_K_MEANS_MODEL_PATH"])
+    if len(user_playlist) > 0:
+        recommended_groups = get_group_recommendations(user_playlist, conf["RECOMMENDATIONS_NUM"], conf["GROUP_K_MEANS_MODEL_PATH"])
+    else:
+        recommended_groups = get_random_group_recommendations(conf["RECOMMENDATIONS_NUM"])
     resp = recommended_groups.to_json()
 
     return resp
@@ -111,6 +117,5 @@ if __name__ == "__main__":
     spotify_app_connect()
     sp = spotify_api_connect()
 
-    
     app.run(host=conf["HOST"], port=int(conf["PORT"]))   
      

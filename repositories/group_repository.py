@@ -6,16 +6,16 @@ from models.track import Track
 
 def get_all():
     try:
-        tracks = Group.objects
-        return tracks
+        groups = Group.objects
+        return groups
     
     except Exception as e:
         print('GROUP - Error getting all: ' + str(e))
 
 def get_by_id(id):
     try:
-        track = Group.objects.filter(id=id).first()
-        return track
+        group = Group.objects.filter(id=id).first()
+        return group
     
     except Exception as e:
         print('GROUP - Error getting by id: ' + str(e))
@@ -27,6 +27,14 @@ def get_by_cluster(cluster, num):
     
     except Exception as e:
         print('GROUP - Error getting by cluster: ' + str(e))
+
+def get_by_ids(ids):
+    try:
+        groups = Group.objects.filter(id__in=ids)
+        return groups
+    
+    except Exception as e:
+        print('GROUP - Error getting by ids: ' + str(e))
 
 def get_playlist(group_id):
     try:

@@ -8,6 +8,11 @@ from repositories.track_information_repository import *
 from k_means.song_k_means import train, predict
 
 
+def get_all_songs():
+    tracks = get_all()
+
+    return tracks
+
 def load_from_csv(csv_file, sample_size):
     df = pd.read_csv(csv_file)
     df = prepare_dataset(df).reset_index(drop=True)
@@ -62,7 +67,9 @@ def update_audio_links(track, audio_link, vocals_link, instrumental_link):
 def update_img_link(track, img_link):
     update_album_cover_link(track, img_link)
 
-def get_all_songs():
-    tracks = get_all()
+def get_random_song_recommendations(num):
+    track_ids = [group.id for group in get_all()]
+    random_ids = random.sample(track_ids, num)
+    recommendations = get_by_ids(random_ids)
 
-    return tracks
+    return recommendations

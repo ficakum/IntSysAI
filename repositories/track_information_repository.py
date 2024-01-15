@@ -40,7 +40,7 @@ def add(name, author, genre, externalId, duration, popularity, album_id, album_n
 
 def get_all():
     try:
-        tracks = TrackInformation.objects.order_by('name')
+        tracks = TrackInformation.objects
         return tracks
     
     except Exception as e:
@@ -53,6 +53,14 @@ def get_by_id(id):
     
     except Exception as e:
         print('TRACK_INFORMATION - Error getting by id: ' + str(e))
+
+def get_by_ids(ids):
+    try:
+        tracks = TrackInformation.objects.filter(id__in=ids)
+        return tracks
+    
+    except Exception as e:
+        print('TRACK_INFORMATION - Error getting by ids: ' + str(e))
 
 def get_by_cluster(cluster, num):
     try:

@@ -1,5 +1,6 @@
 import sys
 import pandas as pd
+import random
 sys.path.append('../') 
 from repositories.group_repository import *
 from k_means.group_k_means import train, predict
@@ -67,5 +68,12 @@ def get_group_recommendations(user_playlist, num, model_path):
 
     favorite_cluster  = predict(result_df, model_path)[0]
     recommendations = get_by_cluster(favorite_cluster, num)
+
+    return recommendations
+
+def get_random_group_recommendations(num):
+    group_ids = [group.id for group in get_all_groups()]
+    random_ids = random.sample(group_ids, num)
+    recommendations = get_by_ids(random_ids)
 
     return recommendations
