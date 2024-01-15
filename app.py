@@ -9,6 +9,7 @@ from database_connections.spotify_app_connection import spotify_app_connect
 from database_connections.spotify_api_connection import spotify_api_connect
 from services.track_information_service import *
 from services.group_service import *
+from services.user_service import *
 from services.dropbox_service import *
 from services.lyrics_service import *
 
@@ -54,12 +55,11 @@ def predict_group_cluster(group_id):
 
 @app.route('/group_recommendations/<user_id>', methods=['GET'])
 def group_recommendations(user_id):
-    # playlist = get_group_playlist(group_id)
-    # playlist = get_all_songs()
-    # recommended_groups = get_group_recommendations(playlist[:30], conf["RECOMMENDATIONS_NUM"])
-    # resp = recommended_groups.to_json()
+    user_playlist = get_listened_songs(user_id)
+    recommended_groups = get_group_recommendations(user_playlist, conf["RECOMMENDATIONS_NUM"], conf["GROUP_K_MEANS_MODEL_PATH"])
+    resp = recommended_groups.to_json()
 
-    return ""#resp
+    return resp
 
 @app.route('/lyrics/<track_info_id>', methods=['GET'])
 def lyrics(track_info_id):
@@ -111,9 +111,6 @@ if __name__ == "__main__":
     spotify_app_connect()
     sp = spotify_api_connect()
 
-    # songs = get_all_songs()
-    # for song in songs:
-    #     print(song.id)
-
+    
     app.run(host=conf["HOST"], port=int(conf["PORT"]))   
      

@@ -14,9 +14,14 @@ def get_group_playlist(group_id):
 
     return playlist
 
-def get_group_playlist_vector(group_id):
-    playlist = get_playlist(group_id)
+def get_df_from_series(series):
+    columns = get_selected_columns()
+    result_df = pd.DataFrame(columns=columns)
+    result_df.loc[len(result_df.index)] = series.values
 
+    return result_df
+
+def get_playlist_vector(playlist):
     playlist_df = pd.DataFrame.from_records([track.to_mongo() for track in playlist])
     playlist_df.columns = get_columns()
 
@@ -36,7 +41,8 @@ def create_group_k_means_model(model_path):
     result_df = pd.DataFrame(columns=columns)
 
     for i, group in enumerate(groups):
-        group_mean = get_group_playlist_vector(group.id)
+        playlist = get_playlist(group.id)
+        group_mean = get_playlist_vector(playlist)
         result_df.loc[len(result_df.index)] = group_mean.values
 
     clusters = train(result_df, model_path)
@@ -46,19 +52,20 @@ def create_group_k_means_model(model_path):
 
 def predict_cluster_for_group(group_id, model_path):
     group = get_by_id(group_id)
-    group_mean = get_group_playlist_vector(group_id)
-
-    columns = get_selected_columns()
-    result_df = pd.DataFrame(columns=columns)
-    result_df.loc[len(result_df.index)] = group_mean.values
+    playlist = get_playlist(group.id)
+    group_mean = get_playlist_vector(playlist)
+    result_df = get_df_from_series(group_mean)
 
     cluster = predict(result_df, model_path)[0]
     update_cluster(group, cluster)
 
     return cluster
 
-def get_group_recommendations(playlist, num):
-    favorite_cluster = 2
+def get_group_recommendations(user_playlist, num, model_path):
+    playlist_mean = get_playlist_vector(user_playlist)
+    result_df = get_df_from_series(playlist_mean)
+
+    favorite_cluster  = predict(result_df, model_path)[0]
     recommendations = get_by_cluster(favorite_cluster, num)
 
     return recommendations
