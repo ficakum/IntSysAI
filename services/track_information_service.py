@@ -3,9 +3,9 @@ from statistics import mode
 import random
 import sys
 sys.path.append('../')
-from helpers.preprocess_dataset import prepare_dataset 
+from k_means.preprocess_song_dataset import prepare_dataset 
 from repositories.track_information_repository import *
-from k_means.k_means import train, predict
+from k_means.song_k_means import train, predict
 
 
 def load_from_csv(csv_file, sample_size):
@@ -24,7 +24,7 @@ def load_from_csv(csv_file, sample_size):
             df.loc[i, "acousticness"], df.loc[i, "instrumentalness"], df.loc[i, "liveness"], df.loc[i, "valence"],
             df.loc[i, "tempo"])
 
-def create_k_means_model(model_path):
+def create_song_k_means_model(model_path):
     tracks = get_all()
 
     tracks_df = pd.DataFrame.from_records([track.to_mongo() for track in tracks])
@@ -48,16 +48,10 @@ def predict_track_cluster(track_info_id, model_path):
 
     return cluster
 
-def get_recommendations(group_id, num):
-    listened_tracks_ids = ['0r7CVbZTWZgbTCYdfa2P31', '2I4jAMEOEUQD5V1byYCqNS', '6fvbl9D9VjMtLRQsuWPyYt', 
-           '06Pvy98db25O7wlfFFFIRM', '0WfKDYeUAoLA3vdvLKKWMW']
-    
-    listened_tracks = get_by_spotify_ids(listened_tracks_ids)
-    clusters = [track.cluster for track in listened_tracks]
+def get_song_recommendations(playlist, num):
+    clusters = [track.cluster for track in playlist]
 
     favorite_cluster = mode(clusters)
-    print(f'Favorite cluster: {favorite_cluster}')
-
     recommendations = get_by_cluster(favorite_cluster, num)
     
     return recommendations

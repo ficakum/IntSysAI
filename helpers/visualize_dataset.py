@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from preprocess_dataset import prepare_dataset
+from k_means.preprocess_song_dataset import prepare_dataset
 
 
 def print_dataset_info(df):

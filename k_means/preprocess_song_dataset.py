@@ -22,11 +22,6 @@ def prepare_dataset(df):
     df.drop_duplicates(subset=['track_id'], keep='first', inplace=True)
     df.drop_duplicates(subset=['track_name'], keep='first', inplace=True)
 
-    # df['track_album_release_date'] = pd.to_datetime(df['track_album_release_date'])
-
-    # years = df["track_album_release_date"].dt.year
-    # df["release_year"] = years
-
     return df
 
 def preprocess(df):

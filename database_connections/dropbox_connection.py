@@ -6,12 +6,12 @@ import base64
 import requests
 import json
 sys.path.append('../')
-from config import config
+from config import conf
 
 
 def get_access_code():
     try:
-        APP_KEY = config["DROPBOX_APP_KEY"]
+        APP_KEY = conf["DROPBOX_APP_KEY"]
         url = f'https://www.dropbox.com/oauth2/authorize?client_id={APP_KEY}&' \
             f'response_type=code&token_access_type=offline'
 
@@ -23,13 +23,13 @@ def get_access_code():
 
 def get_refresh_token():
     try:
-        APP_KEY = config["DROPBOX_APP_KEY"]
-        APP_SECRET = config["DROPBOX_APP_SECRET"]
-        ACCESS_CODE_GENERATED = config["DROPBOX_ACCESS_CODE_GENERATED"]
+        APP_KEY = conf["DROPBOX_APP_KEY"]
+        APP_SECRET = conf["DROPBOX_APP_SECRET"]
+        ACCESS_CODE_GENERATED = conf["DROPBOX_ACCESS_CODE_GENERATED"]
 
         BASIC_AUTH = base64.b64encode(f'{APP_KEY}:{APP_SECRET}'.encode())
 
-        token_url = config["DROPBOX_TOKEN_URL"]
+        token_url = conf["DROPBOX_TOKEN_URL"]
         headers = {
             'Authorization': f"Basic {BASIC_AUTH}",
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -45,9 +45,9 @@ def get_refresh_token():
 
 def dropbox_connect():
     try:
-        APP_KEY = config["DROPBOX_APP_KEY"]
-        APP_SECRET = config["DROPBOX_APP_SECRET"]
-        REFRESH_TOKEN = config["DROPBOX_REFRESH_TOKEN"]
+        APP_KEY = conf["DROPBOX_APP_KEY"]
+        APP_SECRET = conf["DROPBOX_APP_SECRET"]
+        REFRESH_TOKEN = conf["DROPBOX_REFRESH_TOKEN"]
       
         dbx = dropbox.Dropbox(
             app_key = APP_KEY,

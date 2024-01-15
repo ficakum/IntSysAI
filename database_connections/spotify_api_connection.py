@@ -3,17 +3,17 @@ import base64
 import spotipy
 import sys
 sys.path.append('../')
-from config import config
+from config import conf
 
 
 def get_access_token():
-    client_id = config["SPOTIFY_CLIENT_ID"]
-    client_secret = config["SPOTIFY_CLIENT_SECRET"]
+    client_id = conf["SPOTIFY_CLIENT_ID"]
+    client_secret = conf["SPOTIFY_CLIENT_SECRET"]
 
     client_credentials = f"{client_id}:{client_secret}"
     client_credentials_base64 = base64.b64encode(client_credentials.encode())
 
-    token_url = config["SPOTIFY_TOKEN_URL"]
+    token_url = conf["SPOTIFY_TOKEN_URL"]
     headers = {
         'Authorization': f'Basic {client_credentials_base64.decode()}'
     }

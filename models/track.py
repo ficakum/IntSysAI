@@ -6,9 +6,9 @@ sys.path.append('../')
 from constants.constant import ModelConstants
 
 class Track (Document):
-    meta={'collection': ModelConstants["TRACK"]}
+    meta={'collection': ModelConstants["TRACK"], 'strict': False}
 
     trackInformation = ReferenceField(TrackInformation)
-    startTime: DateTimeField
-    group: ReferenceField(Group)
-    state: StringField()
+    startTime = DateTimeField
+    group = ReferenceField(Group)
+    state = StringField()

@@ -11,4 +11,4 @@ class User (Document):
                            max_length=ValidatorConstants["USER_NAME_MAX"])
     email = StringField(required=True, unique=True)
     password = StringField()
-    group: ReferenceField(Group)
+    group = ReferenceField(Group)

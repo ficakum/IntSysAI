@@ -16,4 +16,5 @@ ValidatorConstants = {
     "USER_NAME_MAX" : 30,
     "TRACK_DURATION_MIN" : 1,
     "TRACK_CLUSTER_DEFAULT" : -1,
+    "GROUP_CLUSTER_DEFAULT" : -1
 }

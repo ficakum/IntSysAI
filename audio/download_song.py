@@ -4,7 +4,7 @@ from spotdl import Song
 from spotdl import Downloader
 import sys
 sys.path.append('../')
-import config
+from config import conf
 
 
 def download_song(song_name, dst_folder):
@@ -18,7 +18,7 @@ def download_song(song_name, dst_folder):
         file_name = files[0]
 
         curr_loc = os.path.join(curr_dir, file_name)
-        new_loc = os.path.join(curr_dir, dst_folder, config["AUDIO_FILE_NAME"])
+        new_loc = os.path.join(curr_dir, dst_folder, conf["AUDIO_FILE_NAME"])
 
         if os.path.exists(new_loc):
             os.remove(new_loc)
@@ -26,7 +26,7 @@ def download_song(song_name, dst_folder):
 
         print(f"{file_name} downloaded")
 
-        return config["AUDIO_FILE_NAME"]
+        return conf["AUDIO_FILE_NAME"]
     
     except Exception as e:
         print('Spodl - Error downloading song: ' + str(e))
@@ -41,7 +41,7 @@ def download_album_cover_img(sp, track_id, dst_folder):
 
         img_data = requests.get(image["url"]).content
        
-        new_loc = os.path.join(dst_folder, config["ALBUM_IMG_NAME"])
+        new_loc = os.path.join(dst_folder, conf["ALBUM_IMG_NAME"])
         if os.path.exists(new_loc):
             os.remove(new_loc)
 
@@ -50,7 +50,7 @@ def download_album_cover_img(sp, track_id, dst_folder):
 
         print("Album cover downloaded")
 
-        return config["ALBUM_IMG_NAME"]
+        return conf["ALBUM_IMG_NAME"]
     
     except Exception as e:
         print('Spotipy - Error downloading cover image: ' + str(e))

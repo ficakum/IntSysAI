@@ -2,12 +2,12 @@ from mongoengine import *
 from mongoengine.connection import disconnect
 import sys
 sys.path.append('../')
-from config import config
+from config import conf
 
 def mongo_db_connect():
     try:
-        con = connect(host=config["MONGODB_CONNECTION"] + config["MONGODB_NAME"])
-        db = con.get_database(config["MONGODB_NAME"])
+        con = connect(host=conf["MONGODB_CONNECTION"] + conf["MONGODB_NAME"])
+        db = con.get_database(conf["MONGODB_NAME"])
 
         print("Mongo: Connecting successful")
 

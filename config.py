@@ -3,7 +3,7 @@ import os
 
 load_dotenv()
 
-config = {
+conf = {
     "HOST": os.getenv("HOST"),
     "PORT": os.environ.get("PORT", 5000),
     "MONGODB_CONNECTION": os.getenv("MONGODB_CONNECTION"),
@@ -16,8 +16,9 @@ config = {
     "DROPBOX_APP_SECRET": os.getenv("DROPBOX_APP_SECRET"),
     "DROPBOX_ACCESS_CODE_GENERATED": os.getenv("DROPBOX_ACCESS_CODE_GENERATED"),
     "DROPBOX_REFRESH_TOKEN": os.getenv("DROPBOX_REFRESH_TOKEN"),
-    "RECOMMENDATIONS_NUM" : os.getenv("RECOMMENDATIONS_NUM"),
-    "K_MEANS_MODEL_PATH" : os.getenv("K_MEANS_MODEL_PATH"),
+    "RECOMMENDATIONS_NUM" : int(os.getenv("RECOMMENDATIONS_NUM")),
+    "SONG_K_MEANS_MODEL_PATH" : os.getenv("SONG_K_MEANS_MODEL_PATH"),
+    "GROUP_K_MEANS_MODEL_PATH" : os.getenv("GROUP_K_MEANS_MODEL_PATH"),
     "DATASET_PATH" : os.getenv("DATASET_PATH"),
     "SONGS_FOLDER_PATH" : os.getenv("SONGS_FOLDER_PATH"),
     "DROPBOX_SONGS_FOLDER_PATH" : os.getenv("DROPBOX_SONGS_FOLDER_PATH"),

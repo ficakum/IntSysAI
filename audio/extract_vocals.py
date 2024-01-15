@@ -4,7 +4,7 @@ from spleeter.separator import Separator
 from spleeter.audio import Codec
 import sys
 sys.path.append('../')
-import config
+from config import conf
 
 
 def separate_vocals(directory, file_path):
@@ -14,14 +14,14 @@ def separate_vocals(directory, file_path):
 
         curr_dir = os.getcwd()
 
-        curr_loc = os.path.join(curr_dir, directory, "audio", config["VOCALS_FILE_NAME"])
-        new_loc = os.path.join(curr_dir, directory, config["VOCALS_FILE_NAME"])
+        curr_loc = os.path.join(curr_dir, directory, "audio", conf["VOCALS_FILE_NAME"])
+        new_loc = os.path.join(curr_dir, directory, conf["VOCALS_FILE_NAME"])
         if os.path.exists(new_loc):
             os.remove(new_loc)
         os.rename(curr_loc, new_loc)
 
-        curr_loc = os.path.join(curr_dir, directory, "audio", config["ACCOMPANIMENT_FILE_NAME"])
-        new_loc = os.path.join(curr_dir, directory, config["ACCOMPANIMENT_FILE_NAME"])
+        curr_loc = os.path.join(curr_dir, directory, "audio", conf["ACCOMPANIMENT_FILE_NAME"])
+        new_loc = os.path.join(curr_dir, directory, conf["ACCOMPANIMENT_FILE_NAME"])
         if os.path.exists(new_loc):
             os.remove(new_loc)
         os.rename(curr_loc, new_loc)
