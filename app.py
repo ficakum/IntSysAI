@@ -70,7 +70,10 @@ def group_recommendations(user_id):
 @app.route('/lyrics/<track_info_id>', methods=['GET'])
 def lyrics(track_info_id):
     lyr = get_song_lyrics(track_info_id)
-    resp = lyr.to_json()
+    if lyr != None:
+        resp = lyr.to_json()
+    else:
+        resp = ('', 204)
 
     return resp
 
