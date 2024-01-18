@@ -53,11 +53,11 @@ def train(groups, model_path):
     preprocessed_groups = preprocess(groups)
 
     # kmin = 5
-    # kmax = 20
-    # elbow_method(preprocessed_tracks, kmin, kmax)
-    # silhouette_method(preprocessed_tracks, kmin, kmax)
+    # kmax = 25
+    # elbow_method(preprocessed_groups, kmin, kmax)
+    # silhouette_method(preprocessed_groups, kmin, kmax)
 
-    clusters = create_clusters(preprocessed_groups, 7, model_path)
+    clusters = create_clusters(preprocessed_groups, 8, model_path)
     
     return clusters
 

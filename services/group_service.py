@@ -40,16 +40,22 @@ def create_group_k_means_model(model_path):
 
     columns = get_selected_columns()
     result_df = pd.DataFrame(columns=columns)
+    valid_groups = []
 
     for i, group in enumerate(groups):
-        playlist = get_playlist(group.id)
-        group_mean = get_playlist_vector(playlist)
-        result_df.loc[len(result_df.index)] = group_mean.values
+        if "Group" in group.groupName:
+            playlist = get_playlist(group.id)
+            if len(playlist) == 0:
+                continue
+            else:
+                group_mean = get_playlist_vector(playlist)
+                result_df.loc[len(result_df.index)] = group_mean.values
+                valid_groups.append(group)
 
     clusters = train(result_df, model_path)
 
     for i, cluster in enumerate(clusters):
-        update_cluster(groups[i], cluster)
+        update_cluster(valid_groups[i], cluster)
 
 def predict_cluster_for_group(group_id, model_path):
     group = get_by_id(group_id)
