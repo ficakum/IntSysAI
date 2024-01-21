@@ -34,7 +34,7 @@ def create_song_k_means_model(model_path):
 
     tracks_df = pd.DataFrame.from_records([track.to_mongo() for track in tracks])
     tracks_df.columns = get_columns()
-    tracks_df.drop(["audio_link", "vocals_link", "instrumental_link", "album_cover_link"], axis=1, inplace=True)
+    tracks_df.drop(["audio_link", "vocals_link", "instrumental_link", "album_cover_link", "has_lyrics"], axis=1, inplace=True)
 
     clusters = train(tracks_df, model_path)
 
@@ -46,7 +46,7 @@ def predict_track_cluster(track_info_id, model_path):
 
     track_df = pd.DataFrame.from_records([track.to_mongo()])
     track_df.columns = get_columns()
-    track_df.drop(["audio_link", "vocals_link", "instrumental_link", "album_cover_link"], axis=1, inplace=True)
+    track_df.drop(["audio_link", "vocals_link", "instrumental_link", "album_cover_link", "has_lyrics"], axis=1, inplace=True)
 
     cluster = predict(track_df, model_path)[0]
     update_cluster(track, cluster)

@@ -125,4 +125,4 @@ def get_columns():
                          'track_album_id', 'track_album_name', 'track_album_release_date', 'playlist_name', 'playlist_id',
                          'playlist_genre', 'playlist_subgenre', 'danceability', 'energy', 'key', 'loudness', 'mode',
                          'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'cluster', 'audio_link',
-                         'vocals_link', 'instrumental_link', 'album_cover_link']
+                         'vocals_link', 'instrumental_link', 'album_cover_link', 'has_lyrics']
