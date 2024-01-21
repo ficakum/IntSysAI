@@ -35,3 +35,4 @@ class TrackInformation (DynamicDocument):
     vocals_link = StringField(default="")
     instrumental_link = StringField(default="")
     album_cover_link = StringField(default="")
+    has_lyrics = BooleanField(default=False)

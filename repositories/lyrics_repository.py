@@ -23,3 +23,11 @@ def get_by_track_info_id(track_info_id):
     
     except Exception as e:
         print('LYRICS - Error getting by track_info id: ' + str(e))
+
+def get_all():
+    try:
+        lyrics = Lyrics.objects
+        return lyrics
+    
+    except Exception as e:
+        print('LYRICS - Error getting all: ' + str(e))

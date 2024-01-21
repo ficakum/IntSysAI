@@ -110,6 +110,7 @@ def download_songs():
         
         lyrics_dict = download_lyrics(conf["SONGS_FOLDER_PATH"])
         add_song_lyrics(song, lyrics_dict)
+        update_lyrics(song, True)
 
     return "Songs downloaded."
 

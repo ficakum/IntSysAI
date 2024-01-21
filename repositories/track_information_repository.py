@@ -104,6 +104,14 @@ def update_links(track, audio_link, vocals_link, instrumental_link):
     except Exception as e:
         print('TRACK_INFORMATION - Error updating links: ' + str(e))
 
+def update_has_lyrics(track, value):
+    try:
+        track.has_lyrics = value
+        track.save()
+    
+    except Exception as e:
+        print('TRACK_INFORMATION - Error updating has lyrics: ' + str(e))
+
 def delete(id):
     try:
         track = get_by_id(id)

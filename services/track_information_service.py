@@ -67,6 +67,9 @@ def update_audio_links(track, audio_link, vocals_link, instrumental_link):
 def update_img_link(track, img_link):
     update_album_cover_link(track, img_link)
 
+def update_lyrics(track, value):
+    update_has_lyrics(track, value)
+
 def get_random_song_recommendations(num):
     track_ids = [group.id for group in get_all()]
     random_ids = random.sample(track_ids, num)
