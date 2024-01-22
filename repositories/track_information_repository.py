@@ -1,6 +1,7 @@
 import sys
 sys.path.append('../')
 from models.track_information import TrackInformation
+from mongoengine import Q
 
 
 def add(name, author, genre, externalId, duration, popularity, album_id, album_name, album_release_date, playlist_name,
@@ -40,7 +41,7 @@ def add(name, author, genre, externalId, duration, popularity, album_id, album_n
 
 def get_all():
     try:
-        tracks = TrackInformation.objects
+        tracks = TrackInformation.objects.filter(audio_link__ne="")
         return tracks
     
     except Exception as e:
@@ -64,7 +65,7 @@ def get_by_ids(ids):
 
 def get_by_cluster(cluster, num):
     try:
-        tracks = TrackInformation.objects.filter(cluster=cluster).limit(num)
+        tracks = TrackInformation.objects.filter(Q(cluster=cluster) & Q(audio_link__ne="")).limit(num)
         return tracks
     
     except Exception as e:
