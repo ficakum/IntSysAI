@@ -12,6 +12,12 @@ from services.group_service import *
 from services.user_service import *
 from services.dropbox_service import *
 from services.lyrics_service import *
+from services.track_service import *
+from services.track_information_service2 import *
+from services.user_service2 import *
+from services.group_service2 import *
+from services.lyrics_service2 import *
+from services.track_service2 import *
 
 
 app = Flask(__name__)
@@ -114,12 +120,58 @@ def download_songs():
 
     return "Songs downloaded."
 
+def transfer():
+    songs = get_all_songs()
+    new_songs = dict()
+    for i, song in enumerate(songs):
+        new_song = add_song2(song.name, song.author, song.genre, song.externalId, song.duration, song.popularity, song.album_id, song.album_name, song.album_release_date, song.playlist_name,
+            song.playlist_id, song.playlist_genre, song.playlist_subgenre, song.danceability, song.energy, song.key, song.loudness, song.mode, song.speechiness, 
+            song.acousticness, song.instrumentalness, song.liveness, song.valence, song.tempo, song.cluster, song.audio_link, song.vocals_link, song.instrumental_link, song.album_cover_link, song.has_lyrics)
+    
+        if song.has_lyrics:
+            lyr = get_song_lyrics(song.id)
+            add_lyrics2(lyr.text, lyr.segments, lyr.language, lyr.language_probs, new_song)
+        new_songs[song.id] = new_song
+
+    users = get_all_users()
+    new_users = dict()
+    for i, user in enumerate(users):
+        songs_list = user.songList
+        songs_list_new = []
+        for s in songs_list:
+            songs_list_new.append(new_songs[s.id])
+        new_user = add_user2(user.userName, user.email, user.password, songs_list_new)
+        new_users[user.id] = new_user
+
+    tracks = get_all_tracks()
+    new_tracks = dict()
+    for i, track in enumerate(tracks):
+        new_track = add_track2(new_songs[track.trackInformation.id], track.startTime, track.state)
+        new_tracks[track.id] = new_track
+
+    groups = get_all_groups()
+    new_groups = dict()
+    for i, group in enumerate(groups):
+        new_group = add_group2(group.groupName, group.maxMembers, group.membersNum, group.cluster)
+        if group.currentTrack != None:
+            update_curr_track(new_group, new_tracks[group.currentTrack].id)
+        new_groups[group.id] = new_group
+
+    for i, user in enumerate(users):
+        if user.group != None:
+            update_user2(new_users[user.id], new_groups[user.group.id])
+        
+    for i, track in enumerate(tracks):
+        update_track2(new_tracks[track.id], new_groups[track.group.id])
+
 
 if __name__ == "__main__":
-    db = mongo_db_connect() 
+    db1, db2 = mongo_db_connect() 
     dbx = dropbox_connect()
     spotify_app_connect()
     sp = spotify_api_connect()
 
-    app.run(host=conf["HOST"], port=int(conf["PORT"]))   
+    # transfer()
+
+    # app.run(host=conf["HOST"], port=int(conf["PORT"]))   
      
