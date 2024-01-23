@@ -2,10 +2,10 @@ from mongoengine import *
 import sys
 sys.path.append('../')
 from constants.constant import ModelConstants
-from models.track_information import TrackInformation
+from models.track_information2 import TrackInformation
 
 class Lyrics (DynamicDocument):
-    meta={"db_alias": "db1", 'collection': ModelConstants["LYRICS"]}
+    meta={"db_alias": "db2", 'collection': ModelConstants["LYRICS"]}
 
     text = StringField()
     segments = ListField()

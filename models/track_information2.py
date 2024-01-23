@@ -4,7 +4,7 @@ sys.path.append('../')
 from constants.constant import ValidatorConstants, ModelConstants
 
 class TrackInformation (DynamicDocument):
-    meta={"db_alias": "db1", 'collection': ModelConstants["TRACK_INFORMATION"]}
+    meta={"db_alias": "db2", 'collection': ModelConstants["TRACK_INFORMATION"]}
     
     name = StringField(required=True)
     author = StringField(required=True)

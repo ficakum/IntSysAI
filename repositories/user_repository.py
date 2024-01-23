@@ -22,6 +22,7 @@ def get_by_id(id):
 def get_songs(id):
     try:
         user = get_by_id(id)
+        print(user.to_json())
         tracks_info = []
         for track in user.songList:
             tracks_info.append(track)

@@ -41,7 +41,7 @@ def add(name, author, genre, externalId, duration, popularity, album_id, album_n
 
 def get_all():
     try:
-        tracks = TrackInformation.objects.filter(audio_link__ne="")
+        tracks = TrackInformation.objects# .filter(audio_link__ne="")
         return tracks
     
     except Exception as e:

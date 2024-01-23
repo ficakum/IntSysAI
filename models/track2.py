@@ -1,12 +1,12 @@
 from mongoengine import *
-from models.track_information import TrackInformation
-from models.group import Group
+from models.track_information2 import TrackInformation
+from models.group2 import Group
 import sys
 sys.path.append('../')
 from constants.constant import ModelConstants
 
 class Track (Document):
-    meta={"db_alias": "db1", 'collection': ModelConstants["TRACK"], 'strict': False}
+    meta={"db_alias": "db2", 'collection': ModelConstants["TRACK"], 'strict': False}
 
     trackInformation = ReferenceField(TrackInformation)
     startTime = IntField()
