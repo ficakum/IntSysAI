@@ -60,11 +60,14 @@ def create_group_k_means_model(model_path):
 def predict_cluster_for_group(group_id, model_path):
     group = get_by_id(group_id)
     playlist = get_playlist(group.id)
-    group_mean = get_playlist_vector(playlist)
-    result_df = get_df_from_series(group_mean)
+    if len(playlist) == 0:
+        cluster = None
+    else:
+        group_mean = get_playlist_vector(playlist)
+        result_df = get_df_from_series(group_mean)
 
-    cluster = predict(result_df, model_path)[0]
-    update_cluster(group, cluster)
+        cluster = predict(result_df, model_path)[0]
+        update_cluster(group, cluster)
 
     return cluster
 

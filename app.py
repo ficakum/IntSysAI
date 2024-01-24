@@ -52,7 +52,10 @@ def create_group_recommendation_model():
 @app.route('/predict_group_cluster/<group_id>', methods=['PUT'])
 def predict_group_cluster(group_id):
     cluster = predict_cluster_for_group(group_id, conf["GROUP_K_MEANS_MODEL_PATH"])
-    resp = {"cluster": int(cluster)}
+    if cluster != None:
+        resp = {"cluster": int(cluster)}
+    else:
+        resp = ('', 204)
 
     return resp
 
