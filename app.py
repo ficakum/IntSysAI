@@ -15,24 +15,24 @@ from services.lyrics_service import *
 
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"*": {"origins": "*"}})
+cors = CORS(app, resources={r"*": {"origins": "*"}})  
 api = Api(app)
 
 
-@app.route('/create_song_recommendation_model', methods=['PUT'])
+@app.route('/create_song_recommendation_model', methods=['PUT', 'OPTIONS'])
 def create_song_recommendation_model():
     create_song_k_means_model(conf["SONG_K_MEANS_MODEL_PATH"])
 
     return "Song K-means model created."
 
-@app.route('/predict_song_cluster/<track_info_id>', methods=['PUT'])
+@app.route('/predict_song_cluster/<track_info_id>', methods=['PUT', 'OPTIONS'])
 def predict_song_cluster(track_info_id):
     cluster = predict_track_cluster(track_info_id, conf["SONG_K_MEANS_MODEL_PATH"])
     resp = {"cluster": int(cluster)}
 
     return resp
 
-@app.route('/song_recommendations/<group_id>', methods=['GET'])
+@app.route('/song_recommendations/<group_id>', methods=['GET', 'OPTIONS'])
 def song_recommendations(group_id):
     playlist = get_group_playlist(group_id)
     if len(playlist) > 0:
@@ -43,13 +43,13 @@ def song_recommendations(group_id):
 
     return resp
 
-@app.route('/create_group_recommendation_model', methods=['PUT'])
+@app.route('/create_group_recommendation_model', methods=['PUT', 'OPTIONS'])
 def create_group_recommendation_model():
     create_group_k_means_model(conf["GROUP_K_MEANS_MODEL_PATH"])
 
     return "Group K-means model created."
 
-@app.route('/predict_group_cluster/<group_id>', methods=['PUT'])
+@app.route('/predict_group_cluster/<group_id>', methods=['PUT', 'OPTIONS'])
 def predict_group_cluster(group_id):
     cluster = predict_cluster_for_group(group_id, conf["GROUP_K_MEANS_MODEL_PATH"])
     if cluster != None:
@@ -59,7 +59,7 @@ def predict_group_cluster(group_id):
 
     return resp
 
-@app.route('/group_recommendations/<user_id>', methods=['GET'])
+@app.route('/group_recommendations/<user_id>', methods=['GET', 'OPTIONS'])
 def group_recommendations(user_id):
     user_playlist = get_listened_songs(user_id)
     if len(user_playlist) > 0:
@@ -70,7 +70,7 @@ def group_recommendations(user_id):
 
     return resp
 
-@app.route('/lyrics/<track_info_id>', methods=['GET'])
+@app.route('/lyrics/<track_info_id>', methods=['GET', 'OPTIONS'])
 def lyrics(track_info_id):
     lyr = get_song_lyrics(track_info_id)
     if lyr != None:
@@ -80,13 +80,13 @@ def lyrics(track_info_id):
 
     return resp
 
-@app.route('/load_song_dataset/<sample_size>', methods=['POST'])
+@app.route('/load_song_dataset/<sample_size>', methods=['POST', 'OPTIONS'])
 def load_song_dataset(sample_size):
     load_from_csv(conf["DATASET_PATH"], int(sample_size))
 
     return "Dataset loaded."
 
-@app.route('/download_album_imgs', methods=['PUT'])
+@app.route('/download_album_imgs', methods=['PUT', 'OPTIONS'])
 def download_album_imgs():
     songs = get_all_songs()
 
@@ -96,7 +96,7 @@ def download_album_imgs():
 
     return "Album images downloaded."
 
-@app.route('/download_songs', methods=['PUT'])
+@app.route('/download_songs', methods=['PUT', 'OPTIONS'])
 def download_songs():
     curr_dir = os.getcwd()
     venv_python = curr_dir + conf["SPLEETER_VENV"]
