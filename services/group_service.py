@@ -43,14 +43,13 @@ def create_group_k_means_model(model_path):
     valid_groups = []
 
     for i, group in enumerate(groups):
-        if "Group" in group.groupName:
-            playlist = get_playlist(group.id)
-            if len(playlist) == 0:
-                continue
-            else:
-                group_mean = get_playlist_vector(playlist)
-                result_df.loc[len(result_df.index)] = group_mean.values
-                valid_groups.append(group)
+        playlist = get_playlist(group.id)
+        if len(playlist) == 0:
+            continue
+        else:
+            group_mean = get_playlist_vector(playlist)
+            result_df.loc[len(result_df.index)] = group_mean.values
+            valid_groups.append(group)
 
     clusters = train(result_df, model_path)
 
