@@ -1,6 +1,6 @@
 # AUDITORIUM
 
-- AUDITORIUM je studentski projekat, koji je rađen u četvoročlanom timu u okviru predmeta Inteligentni sistemi na master studijama.
+- AUDITORIUM je studentski projekat, koji je rađen u četvoročlanom timu u okviru predmeta ***Inteligentni sistemi*** na master studijama.
 - Cilj je bio razviti MVP (Minimum Viable Product) koji će koristiti AI i/ili ML tehnike.
 - Implementacija je podeljena na tri dela:
 1. [AI](https://github.com/ficakum/IntSysAI)
